@@ -1,5 +1,33 @@
 #header {
     height: 15vh;
     width: 86vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search__box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin:20px;
+    padding:8px 3px 8px 8px;
+    border-radius:5px;
+    width: 300px;
+    background-color: hsl(252deg 56% 98%);
+}
+.search__Input{
+ border:none;
+ outline:none;
+ width: 237px;
+ background-color: hsl(252deg 56% 98%)
 }
 
+.search__Icon{
+ cursor:pointer;
+}
+
+.Grain__Icon{
+    background-color: white;
+    border-radius:50%;
+    cursor:pointer;
+}
