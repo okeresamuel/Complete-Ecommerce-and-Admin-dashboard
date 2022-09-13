@@ -1,5 +1,16 @@
 #header {
     height: 15vh;
     width: 86vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-
+.search__box{
+    margin:20px;
+    padding:8px;
+    border: none;
+    outline: none;
+    border-radius:3px;
+    width: 217px;
+    background-color: hsl(252deg 56% 98%);
+}
