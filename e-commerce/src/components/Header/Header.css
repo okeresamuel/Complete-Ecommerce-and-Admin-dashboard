@@ -51,6 +51,7 @@
     width:35px;
     position: relative;
     top: 3px;
+    cursor: pointer;
 }
 .profile__iconDiv{
     height: 45px;
@@ -70,5 +71,6 @@
     border-radius:4px;
     top: -6px;
     padding:10px;
+    cursor: pointer;
     left: -11px;
 }
