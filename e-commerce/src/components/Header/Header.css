@@ -40,12 +40,14 @@
     padding: 3px 12px 11px 12px;
     border-radius: 7px;
     margin: 13px;
+    color: rgb(84, 66, 151);
     text-decoration: none;
 }
 .love__icon,.Shopping__icon{
  position: relative;  
  top:6px; 
  left:1.9px;
+ color: hsl(252deg 26% 47%);
 }
 .profile__icon{
     width:35px;
