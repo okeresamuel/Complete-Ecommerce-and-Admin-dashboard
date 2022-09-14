@@ -13,7 +13,7 @@ import './Header.css'
       <GrainIcon className='Grain__Icon' />
       </div>
 
-        <div className='profile__iconsection'>
+      <div className='profile__iconsection'>
    
       <div className='Language__container' >
         <select name="languages" className="Select__lang">
@@ -22,7 +22,7 @@ import './Header.css'
         <option value="French">French</option>
         <option value="Ebonics">Ebonics</option>
         </select> 
-        <LanguageIcon  style={{ color: "hsl(260deg 2% 70%)"}}/>         
+        <LanguageIcon  className="Language__Icon" />         
       </div>
           
           <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
