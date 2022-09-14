@@ -1,4 +1,22 @@
-#logo {
-    height: 11vh;
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lato:wght@700&family=Pacifico&family=Patrick+Hand&family=Poppins:wght@200&family=Roboto:ital,wght@0,300;0,400;1,300&family=Tangerine&display=swap');
+#logo{
+    width: 86vw;
+    height: 15vh;
     width: 14vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Archivo Black', sans-serif;;
+} 
+
+#logo > .svg-icon{
+    margin: 8px;    
 }
+
+.svg-text{
+    margin: 0;
+}
+
+
+

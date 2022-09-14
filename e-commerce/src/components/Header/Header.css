@@ -1,4 +1,76 @@
 #header {
-    height: 11vh;
+    height: 15vh;
     width: 86vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search__box{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 20px;
+    padding:8px 3px 8px 8px;
+    border-radius:5px;
+    width: 300px;
+    background-color: hsl(252deg 56% 98%);
+}
+.search__Input{
+ border:none;
+ outline:none;
+ width: 237px;
+ background-color: hsl(252deg 56% 98%)
+}
+
+.search__Icon{
+ cursor:pointer;
+}
+
+.Grain__Icon{
+    background-color: white;
+    border-radius:50%;
+    cursor:pointer;
+}
+.profile__iconsection{
+    display: flex;
+    justify-content: space-between;
+}
+.Nav__btn1,.Nav__btn2{
+    background-color: hsl(250deg 80% 94%);
+    padding: 3px 12px 11px 12px;
+    border-radius: 7px;
+    margin: 13px;
+    text-decoration: none;
+}
+.love__icon,.Shopping__icon{
+ position: relative;  
+ top:6px; 
+ left:1.9px;
+}
+.profile__icon{
+    width:35px;
+    position: relative;
+    top: 3px;
+    cursor: pointer;
+}
+.profile__iconDiv{
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    border: 1px solid #e0e3e8;
+    border-radius: 50px;
+    margin:10px;
+}
+.Language__container{
+   position: relative;
+   top: 20px;
+}
+.Select__lang{
+    position: relative;
+    border-color: #e0e3e8;
+    border-radius:4px;
+    top: -6px;
+    padding:10px;
+    cursor: pointer;
+    left: -11px;
 }

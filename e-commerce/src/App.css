@@ -3,9 +3,9 @@
 }
 
 #app {
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
-  height: 100vh;
+  height: 100vh; 
 }
 
 .greyBorder {
