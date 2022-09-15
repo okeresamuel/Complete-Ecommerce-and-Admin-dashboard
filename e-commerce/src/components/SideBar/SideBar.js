@@ -1,6 +1,7 @@
 import './SideBar.css'
 import ArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PaletteIcon from '@mui/icons-material/Palette';
+import DeleteIcon from '@mui/icons-material/DeleteOutlined';
 
 const SideBar = () => {
     return (<div id='sideBar' className='greyBorder'>
@@ -89,6 +90,13 @@ const SideBar = () => {
        </div>
        <div  className="Price__container">
        <h4  className='Price__Text'>Price <ArrowUpIcon /></h4>  
+       </div>  
+
+       <div  className="Apply__container">
+       <a href="#Closed" className='Apply__Text'>Apply </a>
+       <div className='delete__icon'>
+       <DeleteIcon />  
+       </div>
        </div>  
     </div>)
 }
