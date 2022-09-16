@@ -1,8 +1,17 @@
 #sideBar {
     height: 85vh;
     width: 14vw;
+    overflow:auto;
+    padding-bottom: 50px;
 }
-
+#sideBar::-webkit-scrollbar{
+    width:10px;
+    height: 10px;
+}
+#sideBar::-webkit-scrollbar-thumb{
+    background-color:rgba(0, 0, 255, 0.788);
+    border-radius:4px;
+}
 .link{
     display:block;
     text-decoration: none;
@@ -12,11 +21,41 @@
 .link:hover{
     color:blue;
 }
-.link__container{
+.category__container,.Filterbytype__container,.FilterbyColor__container,.Size__container,.Price__container{
 padding:0px 3px 5px 20px;
 border-bottom:1px solid #F2F0F1;
 }
 
-.Category__text{
-    margin-left: 7px;
+.Header__text{
+ margin-left: 7px;
+}
+
+.Tipe__text,.Size__Text,.Price__Text{
+ display: flex;
+ justify-content: space-between;
+ padding: 0px 6px 0px 7px;
+}
+.checkbox__container{
+line-height: 2;
+}
+
+.Apply__container{
+display: flex;
+justify-content:space-between;
+padding:30px 20px 20px 20px;
+}
+
+.Apply__Text{
+  padding:4px 16px 8px 16px;
+  border-radius:6px;
+  background-color: blue;
+  color: white;
+  text-decoration: none;
+}
+.delete__icon{
+    color: #857d80bd;
+    border: 1px solid rgba(0, 0, 0, 0.096);
+    border-radius: 5px;
+    padding: 2px;
+    cursor: pointer;
 }
