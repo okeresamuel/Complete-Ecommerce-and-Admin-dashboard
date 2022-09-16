@@ -11,34 +11,52 @@ const ButtonImage = (props) => {
     const { imageSource, imageWidth, imageLeftPadding } = props
 
     return (
-        <img class="buttonImage" src={imageSource || ""} alt={imageSource ? "Button Image" : ""} style={{ width: imageWidth || "20px", paddingLeft: imageLeftPadding || "" }} />
+        <img className="buttonImage" src={imageSource || ""} alt={imageSource ? "Button Image" : ""} style={{ width: imageWidth || "20px", paddingLeft: imageLeftPadding || "" }} />
     )
 }
 
 const Button = (props) => {
-    const { text, width, backgroundColor, textColor, fontWeight, fontSize, imageSource, imageWidth, imageLeftPadding, iconPicture } = props
+    const { text, width, height, backgroundColor, textColor, fontWeight, fontSize, imageSource, imageWidth, imageLeftPadding, iconPicture } = props
 
     const iconSelection = (icon) => {
-        if (icon === "cart") {
-            <ShoppingCartIcon imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
-        } else if (icon === "trash") {
-            <DeleteOutlineIcon imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
-        } else if (icon === "house") {
-            <HomeIcon imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
-        } else if (icon === "globe") {
-            <LanguageIcon imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
-        } else if (icon === "heart") {
-            <FavoriteBorderIcon imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
-        } else if (icon === "filled heart") {
-            <FavoriteIcon imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
-        } else if (icon === "x") {
-            <CloseIcon imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
+        if (!icon) {
+            return (
+                <ButtonImage imageSource={imageSource} imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
+            )
+        } else if (icon.toLowerCase() === "cart") {
+            return (
+                <ShoppingCartIcon className='buttonImage' imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
+            )
+        } else if (icon.toLowerCase() === "trash") {
+            return (
+                <DeleteOutlineIcon className='buttonImage' imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
+            )
+        } else if (icon.toLowerCase() === "house") {
+            return (
+                <HomeIcon className='buttonImage' imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
+            )
+        } else if (icon.toLowerCase() === "globe") {
+            return (
+                <LanguageIcon className='buttonImage' imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
+            )
+        } else if (icon.toLowerCase() === "heart") {
+            return (
+                <FavoriteBorderIcon className='buttonImage' imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
+            )
+        } else if (icon.toLowerCase() === "filled heart") {
+            return (
+                <FavoriteIcon className='buttonImage' imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
+            )
+        } else if (icon.toLowerCase() === "x") {
+            return (
+                <CloseIcon className='buttonImage' imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
+            )
         } else {
-            <ButtonImage imageSource={imageSource} imageWidth={imageWidth} imageLeftPadding={imageLeftPadding} />
+            console.log("Source file location or icon picture name needed.")
         }
     };
 
-    return <div class="button" style={{ background: backgroundColor || "#fffeff", borderRadius: "8px", color: textColor || "#34237b", maxWidth: width || "90px", fontWeight: fontWeight || "600", fontSize: fontSize || "14px" }}>
+    return <div class="button" style={{ background: backgroundColor || "#fffeff", borderRadius: "8px", color: textColor || "#34237b", maxWidth: width || "90px", height: height || "20px", fontWeight: fontWeight || "600", fontSize: fontSize || "14px" }}>
         {text || ""} {/*This will be some user imputted text */}
         {iconSelection(iconPicture)}
     </div>

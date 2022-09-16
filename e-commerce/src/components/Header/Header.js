@@ -3,8 +3,9 @@ import GrainIcon from '@mui/icons-material/Grain';
 import LanguageIcon from '@mui/icons-material/Language';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import './Header.css'
-import Button from '../Button/Button.js'
+import Button from '../Button/Button.js';
+import './Header.css';
+
 
 const Header = () => {
     return (<div id='header'>
@@ -25,7 +26,9 @@ const Header = () => {
         </select> 
         <LanguageIcon  style={{ color: "hsl(260deg 2% 70%)"}}/>         
       </div>
-          
+
+          <Button text="Hello" width="20px" height="10px" backgroundColor="purple" textColor="white" fontWeight="bold" fontSize="10px" imageSource="https://cdn-icons-png.flaticon.com/128/5349/5349022.png" imageWidth="20px" imageLeftPadding="14px"  />
+
           <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
           <a href="#closed" className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></a>
           <div className="profile__iconDiv">
