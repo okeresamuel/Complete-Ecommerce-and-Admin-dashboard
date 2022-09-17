@@ -1,5 +1,9 @@
 .button {
-    padding: 13px;
     display: flex;
     justify-content: center;
+    padding: 30px;
+    position: absolute;
+    cursor: pointer;
+    bottom: 30px;
+    right:30px;
 }
