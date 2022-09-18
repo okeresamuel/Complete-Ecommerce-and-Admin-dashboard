@@ -4,7 +4,7 @@
 
     return (
 
-        <div> My Products</div>
+        <div></div>
     )
 
 }
