@@ -1,4 +1,7 @@
 #main {
     height: 85vh;
     width: 86vw;
+    overflow: scroll;
+    /* align-items: center;
+    justify-content: center; */
 }
