@@ -1,6 +1,6 @@
 import { Card, CardMedia, CardContent, Typography, CardActions, Grid, FormRow, Box } from "@mui/material";
 import { margin } from "@mui/system";
-import { items } from "../../data/Items";
+import { items } from "../../data/items";
 import "./products.css"
 
 
