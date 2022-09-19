@@ -3,7 +3,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import "./Breadcrumb.css"
 
 const crumb = (text, text2 ="", nameOfClass="") => {
-    return <a> <li className="breadCrumbs {nameOfClass}"> {text} {text2} </li> </a>
+    return <a> <li className={`breadCrumbs ${nameOfClass}`}> {text} {text2} </li> </a>
 }
 
 const Breadcrumb = () => {
