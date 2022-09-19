@@ -4,3 +4,15 @@
     padding-top: 20px;
     
 }
+
+.Favorite_Icon {
+    color: #857d80bd;
+    position: relative;
+    top: -27em;
+    left: 13em;
+    cursor: pointer;
+}
+
+.Favorite_Icon:hover{
+    color:blue;
+}

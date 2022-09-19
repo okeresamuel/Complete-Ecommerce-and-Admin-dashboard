@@ -2,6 +2,8 @@ import { Card, CardMedia, CardContent, Typography, CardActions, Grid, FormRow, B
 import { margin } from "@mui/system";
 import { items } from "../../data/items";
 import "./products.css"
+import FavoriteIcon from '@mui/icons-material/Favorite';
+
 
 
 
@@ -39,6 +41,7 @@ const Products = () => {
                                         height="350"
                                         image={item.image}
                                         alt="shirt" />
+                                       
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">
                                             {item.name}
@@ -47,8 +50,10 @@ const Products = () => {
                                             Price: 100
                                         </Typography>
                                     </CardContent>
-
                                 </Card>
+                                <div className="Favorite_Icon">
+                                    <FavoriteIcon />
+                                </div>
                             </Grid>
                         // </div>
 
