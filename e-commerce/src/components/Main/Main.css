@@ -1,0 +1,14 @@
+#main {
+    height: 85vh;
+    width: 86vw;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+@media (max-width:1170px){
+    #main {
+        height: 85vh;
+        width: 100vw;
+    }
+}
