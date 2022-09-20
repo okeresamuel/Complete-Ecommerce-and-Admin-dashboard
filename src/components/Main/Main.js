@@ -2,18 +2,15 @@ import './Main.css'
 import ItemLable from '../Item-Lable/itemLable';
 import Products from '../products/Products';
 import Button from '../Button/Button.js';
+import Breadcrumb from '../Breadcrumb/Breadcrumb';
 
 const Main = () => {
     return (
-        <>
             <div id='main' className='greyBorder'>
-            <>
-            <Button text="Hello"  width="20px" height="20px" backgroundColor="blue" textColor="white" fontWeight="bold" fontSize="10px" imageSource="https://cdn-icons-png.flaticon.com/128/5349/5349022.png" imageWidth="60px" imageLeftPadding="14px" />
+            <Breadcrumb />
             <ItemLable />
-            <Products></Products>
-            </>
+            <Products />
             </div>
-
-        </>)
+            )
 }
 export default Main;
