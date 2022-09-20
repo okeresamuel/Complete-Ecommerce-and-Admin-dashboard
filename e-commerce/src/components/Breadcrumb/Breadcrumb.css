@@ -1,0 +1,25 @@
+#breadCrumbSection {
+    display: flex;
+    padding: 0px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+#breadCrumbHomeIcon {
+    /* Just in case    */
+}
+
+#breadCrumbList {
+    display: flex;
+    list-style-type: none;
+    padding-top: 0px;
+    padding-left: 8px;
+    margin: 0px;
+}
+
+li {
+    padding-left: 10px;
+    cursor: pointer;
+    color: #e0dde0;
+}
