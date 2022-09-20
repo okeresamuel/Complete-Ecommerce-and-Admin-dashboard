@@ -1,11 +1,7 @@
-import { Card, CardMedia, CardContent, Typography, CardActions, Grid, FormRow, Box } from "@mui/material";
-import { margin } from "@mui/system";
+import { Card, CardMedia, CardContent, Typography, Grid,} from "@mui/material";
 import { items } from "../../data/items";
 import "./products.css"
 import FavoriteIcon from '@mui/icons-material/Favorite';
-
-
-
 
 // {
 //     <Box sx={{ flexGrow: 1 }}>
