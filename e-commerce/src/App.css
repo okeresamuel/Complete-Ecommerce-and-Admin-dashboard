@@ -1,0 +1,14 @@
+:root {
+  --borderColor: #F2F0F1
+}
+
+#app {
+  display: flex; 
+  flex-wrap: wrap;
+  height: 100vh; 
+}
+
+.greyBorder {
+  border: 1px solid var(--borderColor);
+  box-sizing: border-box;
+}
