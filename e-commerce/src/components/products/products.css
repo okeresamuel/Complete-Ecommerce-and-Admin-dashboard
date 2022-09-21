@@ -9,6 +9,9 @@
     position: relative;
     top: -27em;
     left: 13em;
+    display: flex;
+    max-width: 28px;
+    justify-content: center;
     cursor: pointer;
     width:10px;
 }
