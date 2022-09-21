@@ -2,7 +2,7 @@
 
     padding: 5px;
     padding-top: 20px;
-    
+
 }
 
 .Favorite_Icon {
@@ -13,6 +13,6 @@
     cursor: pointer;
 }
 
-.Favorite_Icon:hover{
-    color:blue;
+.Favorite_Icon:hover {
+    color: blue;
 }
