@@ -2,9 +2,13 @@ import './SideBar.css'
 import ArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PaletteIcon from '@mui/icons-material/Palette';
 import DeleteIcon from '@mui/icons-material/DeleteOutlined';
+import ShowSidebarIcon from '@mui/icons-material/MenuBook';
+
 
 const SideBar = () => {
-    return (<div id='sideBar' className='greyBorder'>
+    return (
+     <>
+     <div id='sideBar' className='greyBorder'>
 
        <h4 className='Header__text'>Category</h4>
        <div className='category__container'>
@@ -97,8 +101,11 @@ const SideBar = () => {
        <div className='delete__icon'>
        <DeleteIcon />  
        </div>
-       </div>  
-    </div>)
+       </div> 
+       </div>
+       <ShowSidebarIcon className="sidebar__Icon" /> 
+       </>
+    )
 }
 
 export default SideBar;

@@ -2,8 +2,8 @@
     height: 85vh;
     width: 86vw;
     overflow: scroll;
+    overflow-x: auto;
 }
-
 
 @media (max-width:1170px){
     #main {

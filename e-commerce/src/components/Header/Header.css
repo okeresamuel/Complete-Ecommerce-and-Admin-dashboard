@@ -36,12 +36,14 @@
     justify-content: space-between;
 }
 .Nav__btn1,.Nav__btn2{
-    background-color:hsl(250deg 57% 97%);
-    padding: 3px 12px 11px 12px;
+    background-color: hsl(250deg 57% 97%);
+    padding: 9px 12px 11px 12px;
     border-radius: 7px;
     margin: 13px;
     color: blue;
     text-decoration: none;
+    position: relative;
+    top: -5px;
 }
 .love__icon,.Shopping__icon{
  position: relative;  
@@ -78,4 +80,37 @@
 }
 .Language__Icon{
     color: hsl(260deg 2% 70%);
+}
+
+@media (max-width: 1000px){
+.Language__container{
+    position: absolute;
+    right: 70px;
+    display: grid;
+    background-color: rgb(255, 255, 255);
+    height: 192px;
+    border-radius: 5px;
+    z-index: 2;
+    box-shadow: -2px 5px 11px 4px rgba(0,0,0,0.25);
+    -webkit-box-shadow: -2px 5px 11px 4px rgba(0,0,0,0.25);
+    -moz-box-shadow: -2px 5px 11px 4px rgba(0,0,0,0.25);
+}
+.Nav__btn1,.Nav__btn2{
+    background-color: hsl(250deg 57% 97%);
+    padding: 3px 12px 6px 12px;
+    border-radius: 7px;
+    margin: 13px;
+    color: blue;
+    text-decoration: none;
+
+}
+.Select__lang{
+    position: sticky;
+    top: 41px;
+    width: 119px;
+    margin: auto;    
+}
+.Language__Icon{
+    visibility: hidden;
+}
 }

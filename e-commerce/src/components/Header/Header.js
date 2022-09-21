@@ -15,7 +15,6 @@ const Header = () => {
       </div>
 
       <div className='profile__iconsection'>
-   
       <div className='Language__container' >
         <select name="languages" className="Select__lang">
         <option value="Eng">Eng</option>
@@ -24,10 +23,10 @@ const Header = () => {
         <option value="Ebonics">Ebonics</option>
         </select> 
         <LanguageIcon  className="Language__Icon" />         
-      </div>
+        <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
+        <a href="#closed" className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></a>
+        </div> 
 
-          <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
-          <a href="#closed" className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></a>
           <div className="profile__iconDiv">
           <img  className="profile__icon" src='https://cdn-icons-png.flaticon.com/128/5349/5349022.png' alt='profile__pic'/>
         </div>

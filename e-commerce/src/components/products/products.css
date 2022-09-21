@@ -1,8 +1,6 @@
 #products {
-
     padding: 5px;
     padding-top: 20px;
-    
 }
 
 .Favorite_Icon {
@@ -11,8 +9,11 @@
     top: -27em;
     left: 13em;
     cursor: pointer;
+    width:10px;
 }
-
+.MuiGrid-root{
+padding: 10px 0px 0px 17px;
+}
 .Favorite_Icon:hover{
     color:blue;
 }
