@@ -1,0 +1,19 @@
+#pageButtonsSection {
+    display: flex;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    padding: 10px;
+    border: 1px;
+    margin: 5px;
+}
+
+.pageButton {
+    border-style: solid;
+    border-color: #e4e1e4;
+    padding-left: 18px;
+    padding-right: 18px;
+}

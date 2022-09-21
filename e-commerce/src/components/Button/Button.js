@@ -11,12 +11,12 @@ const ButtonImage = (props) => {
     const { imageSource, imageWidth, imageLeftPadding } = props
 
     return (
-        <img className="buttonImage" src={imageSource || ""} alt={imageSource ? "Button Image" : ""} style={{ width: imageWidth || "20px", paddingLeft: imageLeftPadding || "" }} />
+        <img className="buttonImage" src={imageSource || ""} alt={imageSource ? "Button Image" : ""} style={{ width: imageWidth || "", paddingLeft: imageLeftPadding || "" }} />
     )
 }
 
 const Button = (props) => {
-    const { text, width, height, backgroundColor, textColor, fontWeight, fontSize, imageSource, imageWidth, imageLeftPadding, iconPicture } = props
+    const { text, width, height, backgroundColor, textColor, fontWeight, fontSize, borderRadius, imageSource, imageWidth, imageLeftPadding, iconPicture, extraClass } = props
 
     const iconSelection = (icon) => {
         if (!icon) {
@@ -56,7 +56,7 @@ const Button = (props) => {
         }
     };
 
-    return <div class="button" style={{ background: backgroundColor || "#fffeff", borderRadius: "65px", color: textColor || "#34237b", maxWidth: width || "90px", height: height || "20px", fontWeight: fontWeight || "600", fontSize: fontSize || "14px" }}>
+    return <div className={`button ${extraClass || ""}`} style={{ background: backgroundColor || "#fffeff", borderRadius: borderRadius || "0px", color: textColor || "#34237b", maxWidth: width || "90px", height: height || "20px", fontWeight: fontWeight || "600", fontSize: fontSize || "14px" }}>
         {text || ""} {/*This will be some user imputted text */}
         {iconSelection(iconPicture)}
     </div>
