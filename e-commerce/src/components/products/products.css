@@ -1,6 +1,7 @@
 #products {
     padding: 5px;
     padding-top: 20px;
+
 }
 
 .Favorite_Icon {
@@ -16,4 +17,5 @@ padding: 10px 0px 0px 17px;
 }
 .Favorite_Icon:hover{
     color:blue;
+
 }
