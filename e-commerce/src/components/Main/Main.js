@@ -1,8 +1,8 @@
 import './Main.css'
 import ItemLable from '../Item-Lable/itemLable';
 import Products from '../products/Products';
-import Button from '../Button/Button.js';
 import Breadcrumb from '../Breadcrumb/Breadcrumb';
+import PageButton from '../PageButtons/PageButton';
 
 const Main = () => {
     return (
@@ -10,6 +10,7 @@ const Main = () => {
             <Breadcrumb />
             <ItemLable />
             <Products />
+            <PageButton />
             </div>
             )
 }

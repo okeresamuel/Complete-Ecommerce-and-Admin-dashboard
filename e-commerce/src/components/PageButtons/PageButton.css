@@ -1,0 +1,6 @@
+#pageButtonsSection {
+    display: flex;
+    margin: 15px;
+    justify-content: center;
+    align-items: center;
+}
