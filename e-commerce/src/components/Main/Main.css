@@ -3,6 +3,7 @@
     width: 86vw;
     overflow: scroll;
     overflow-x: auto;
+    scroll-behavior: smooth;
 }
 
 @media (max-width:1170px){

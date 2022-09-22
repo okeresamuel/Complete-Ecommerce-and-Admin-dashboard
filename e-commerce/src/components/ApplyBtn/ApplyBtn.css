@@ -1,0 +1,29 @@
+.Apply__container{
+    display: flex;
+    justify-content:space-between;
+    padding:30px 20px 20px 20px;
+    }
+    
+    .Apply__Text{
+      padding:4px 16px 8px 16px;
+      border-radius:6px;
+      background-color: blue;
+      color: white;
+      text-decoration: none;
+    }
+    .delete__icon{
+        color: #857d80bd;
+        border: 1px solid rgba(0, 0, 0, 0.096);
+        border-radius: 5px;
+        padding: 2px;
+        cursor: pointer;
+    }
+    .sidebar__Icon{
+        position: absolute;
+        bottom: 21px;
+        right: 40px;
+        cursor: pointer;
+        color: blue;
+        visibility: hidden;
+    }
+    

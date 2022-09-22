@@ -3,7 +3,7 @@ import HomeIcon from '@mui/icons-material/Home';
 import "./Breadcrumb.css"
 
 const crumb = (text, text2 ="", nameOfClass="") => {
-    return <a> <li className={`breadCrumbs ${nameOfClass}`}> {text} {text2} </li> </a>
+    return <a href='#closed'> <li className={`breadCrumbs ${nameOfClass}`}> {text} {text2} </li> </a>
 }
 
 const Breadcrumb = () => {
@@ -12,7 +12,7 @@ const Breadcrumb = () => {
 
     return (
         <div id="breadCrumbSection">
-            <a hfre="." > <HomeIcon id="breadCrumbHomeIcon" sx={{ color: "#9f9c9f", fontSize: 25 }} /> </a>
+            <a href="." > <HomeIcon id="breadCrumbHomeIcon" sx={{ color: "#9f9c9f", fontSize: 25 }} /> </a>
             <ul id="breadCrumbList">
                 {
                     crumbs.map((e, i, arr) => {

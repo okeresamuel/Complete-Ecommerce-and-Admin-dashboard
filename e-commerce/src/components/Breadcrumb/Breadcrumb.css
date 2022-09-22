@@ -9,7 +9,9 @@
 #breadCrumbHomeIcon {
     /* Just in case    */
 }
-
+a{
+    text-decoration: none;
+}
 #breadCrumbList {
     display: flex;
     list-style-type: none;

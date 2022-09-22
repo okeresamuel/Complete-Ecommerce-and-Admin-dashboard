@@ -1,6 +1,6 @@
-import ListTwoToneIcon from '@mui/icons-material/ListTwoTone';
+import WidgetsIcon from '@mui/icons-material/Widgets';
 import ExitIcon from '@mui/icons-material/ClearTwoTone';
-import "../Item-Lable/itemLable.css"
+import "./itemLable.css"
 function ItemLable() {
    return (
       <>
@@ -8,7 +8,7 @@ function ItemLable() {
             <h1>SweatShirt</h1>
             <div className="Input__Container">
                <input type="search" placeholder="Sort by: Most Popular" className="Input__sortby"></input>
-               <ListTwoToneIcon />
+               <WidgetsIcon />
             </div>
          </div>
 
