@@ -12,7 +12,7 @@ const Breadcrumb = () => {
 
     return (
         <div id="breadCrumbSection">
-            <a href="." > <HomeIcon id="breadCrumbHomeIcon" sx={{ color: "#9f9c9f", fontSize: 25 }} /> </a>
+            <a href="#Home" > <HomeIcon id="breadCrumbHomeIcon" sx={{ color: "#9f9c9f", fontSize: 25 }} /> </a>
             <ul id="breadCrumbList">
                 {
                     crumbs.map((e, i, arr) => {

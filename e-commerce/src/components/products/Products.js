@@ -9,7 +9,7 @@ const Products = () => {
 
     return (
         <>
-            <Grid container columns={{ xs: 4, sm: 8, md: 12 }} columnSpacing={{ xs: 1, md: 1 }}>
+            <div className="Products__display" container columns={{ xs: 4, sm: 8, md: 12 }} columnSpacing={{ xs: 1, md: 1 }}>
 
                 {items.map((item) => (
 
@@ -22,7 +22,7 @@ const Products = () => {
                                 image={item.image}
                                 alt="shirt" />
 
-                            <CardContent>
+                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     {item.name}
                                 </Typography>
@@ -35,11 +35,11 @@ const Products = () => {
                             <FavoriteIcon />
                         </div>
                     </Grid>
-
+                   
 
                 ))}
 
-            </Grid>
+            </div>
         </>
     )
 

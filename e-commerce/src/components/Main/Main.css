@@ -6,6 +6,16 @@
     scroll-behavior: smooth;
 }
 
+
+#main::-webkit-scrollbar{
+    width:15px;
+    height: 10px;
+  }
+  #main::-webkit-scrollbar-thumb{
+    border-radius:6px;
+    background-color: blue;
+  }
+
 @media (max-width:1170px){
     #main {
         height: 85vh;

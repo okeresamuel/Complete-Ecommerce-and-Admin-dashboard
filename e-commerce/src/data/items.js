@@ -79,5 +79,32 @@ export const items = [
         discount: false,
         oldPrice: 200,
         favorite: false
+    },
+    {
+        id: 9,
+        name: "Product 9",
+        price: 200,
+        image: "https://ae01.alicdn.com/kf/H784b4528c4aa475b92bb441e63b92d97M/Green-Black-V-neck-Sweater-Vest-Men-Warm-Fashion-Casual-Knitted-Pullover-Men-Korean-Clothes-Loose.jpg_Q90.jpg_.webp",
+        discount: false,
+        oldPrice: 200,
+        favorite: false
+    },
+    {
+        id: 9,
+        name: "Product 9",
+        price: 200,
+        image: "https://ae01.alicdn.com/kf/H784b4528c4aa475b92bb441e63b92d97M/Green-Black-V-neck-Sweater-Vest-Men-Warm-Fashion-Casual-Knitted-Pullover-Men-Korean-Clothes-Loose.jpg_Q90.jpg_.webp",
+        discount: false,
+        oldPrice: 200,
+        favorite: false
+    },
+    {
+        id: 9,
+        name: "Product 9",
+        price: 200,
+        image: "https://ae01.alicdn.com/kf/H784b4528c4aa475b92bb441e63b92d97M/Green-Black-V-neck-Sweater-Vest-Men-Warm-Fashion-Casual-Knitted-Pullover-Men-Korean-Clothes-Loose.jpg_Q90.jpg_.webp",
+        discount: false,
+        oldPrice: 200,
+        favorite: false
     }
 ]
