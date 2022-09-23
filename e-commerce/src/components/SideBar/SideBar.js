@@ -15,7 +15,7 @@ const SideBar = () => {
      <Category />
      <TipeSelect />
      <ColorFilter />
-     <SizeSelect />
+     <SizeSelect size="Size"/>
      <PriceSelect />
      <ApplyBtn /> 
      </div>
