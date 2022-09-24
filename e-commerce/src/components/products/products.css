@@ -5,6 +5,19 @@
 
 }
 
+.Shopping_Button{
+    padding:4px 16px 8px 16px;
+    border-radius:6px;
+    color: white;
+    background-color: blue;
+    display: flex;
+    width: 10px;
+    position: relative;
+    float: right;
+    bottom: 35px;
+    justify-content: center;
+}
+
 .Favorite_Icon {
     color: #857d80bd;
     position: relative;
