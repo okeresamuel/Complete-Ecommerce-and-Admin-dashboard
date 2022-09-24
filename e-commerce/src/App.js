@@ -4,6 +4,8 @@ import SideBar from './components/SideBar/SideBar';
 import Main from './components/Main/Main';
 
 import './App.css';
+
+
 function App() {
   return (
     <div id="app">
@@ -12,7 +14,7 @@ function App() {
       <SideBar />
       <Main />
     </div>
-  );
+);
 }
 
 export default App;

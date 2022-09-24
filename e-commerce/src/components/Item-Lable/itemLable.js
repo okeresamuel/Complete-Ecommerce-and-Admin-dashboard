@@ -8,7 +8,7 @@ function ItemLable() {
             <h1>SweatShirt</h1>
             <div className="Input__Container">
                <input type="search" placeholder="Sort by: Most Popular" className="Input__sortby"></input>
-               <WidgetsIcon />
+               <WidgetsIcon style={{ width: "25px", color: "hotpink"}} />
             </div>
          </div>
 

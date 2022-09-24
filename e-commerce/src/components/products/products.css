@@ -24,10 +24,54 @@
     cursor: pointer;
     width:10px;
 }
-.MuiGrid-root{
-padding: 10px 0px 0px 17px;
+
+.Products__display{
+    padding: 10px 0px 0px 17px;
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap:20px;
+    overflow-y: hidden;
 }
 .Favorite_Icon:hover{
     color:blue;
 
+}
+
+.Line_Icon1{
+    width:10px;
+    height: 40px;
+    background-color: blue;
+    position: absolute;
+}
+
+@media (max-width:1000px){
+    .Products__display{
+        display:grid;
+        grid-template-columns: auto auto auto;
+        grid-gap:0px;
+    }
+@media(max-width:1000px){
+    .Products__display{
+        display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       padding-right:20px;
+    } 
+}
+@media(max-width:900px){
+    .Products__display{
+       display: grid;
+       grid-template-columns: auto auto ;
+       justify-content: space-evenly;
+    } 
+}
+}
+
+/* smalest screen */
+@media(max-width:700px){
+    .Products__display{
+       display: grid;
+       grid-template-columns: auto;
+       justify-content: space-evenly;
+    } 
 }

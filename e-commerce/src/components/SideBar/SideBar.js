@@ -6,20 +6,21 @@ import SizeSelect from '../SizeSelect/SizeSelect';
 import PriceSelect from '../PriceSelect/PriceSelect';
 import ApplyBtn from '../ApplyBtn/ApplyBtn';
 import MenuIcon from '@mui/icons-material/Menu';
-
+import BackToTopIcon from '@mui/icons-material/VerticalAlignTop';
 const SideBar = () => {
-   
+
      return (
      <>
      <div id='sideBar' className='greyBorder'>
      <Category />
      <TipeSelect />
      <ColorFilter />
-     <SizeSelect />
+     <SizeSelect size="Size"/>
      <PriceSelect />
-     <ApplyBtn />
-     <MenuIcon className="sidebar__Icon" /> 
+     <ApplyBtn /> 
      </div>
+     <MenuIcon  className="sideBarShow__Icon" />
+     <a href='Home'><BackToTopIcon className="BackToTop__Icon" /></a>
      </>
     )
 }

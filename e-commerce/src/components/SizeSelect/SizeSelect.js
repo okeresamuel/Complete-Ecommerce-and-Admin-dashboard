@@ -2,10 +2,10 @@ import React from 'react'
 import "../SizeSelect/SizeSelect.css"
 import ArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-function SizeSelect() {
+function SizeSelect({size}) {
   return (
     <div className='Size__container'>
-    <h4 className="Size__Text" >Size <ArrowUpIcon /></h4> 
+    <h4 className="Size__Text" > {size} <ArrowUpIcon /></h4> 
     </div>
   )
 }

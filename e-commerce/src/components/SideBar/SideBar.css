@@ -9,10 +9,27 @@
     height: 10px;
 }
 #sideBar::-webkit-scrollbar-thumb{
-    background-color:rgba(0, 0, 255, 0.788);
+    background-color:blue;
     border-radius:4px;
 }
 
+
+.sideBarShow__Icon,.BackToTop__Icon{
+    background-color:white; 
+    color: blue;
+    padding:6px;
+    border-radius:5px;
+    box-shadow: -2px 5px 11px 4px rgba(0,0,0,0.25);
+    visibility: visible;
+    position: fixed;
+    bottom: 45px;
+    right: 40px;
+    cursor: pointer;
+    z-index: 2;
+}
+.BackToTop__Icon{
+    bottom: 120px;
+}
 @media (max-width:1170px){
 #sideBar{
     height: 85vh;
@@ -26,7 +43,7 @@
     backdrop-filter: blur(82px)
 }
 
-.sidebar__Icon{
+.sideBarShow__Icon{
     visibility: visible;
     background-color:white;
     padding:6px;
@@ -35,4 +52,5 @@
     -webkit-box-shadow: -2px 5px 11px 4px rgba(0,0,0,0.25);
     -moz-box-shadow: -2px 5px 11px 4px rgba(0,0,0,0.25);
 }
-}
+
+} 
