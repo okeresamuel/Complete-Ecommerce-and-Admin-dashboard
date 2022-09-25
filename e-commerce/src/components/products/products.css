@@ -17,22 +17,23 @@
 }
 
 .Promo_Iconz {
-    top: 3em;
-    height: 25px;
+    /* top: 3em; */
+    height: 0px;
     color: blue;
+   
 }
 
 .Favorite_Icon {
     color: #857d80bd;
     position: relative;
     top: -27em;
-    left: 13em;
+    left: 19em;
     cursor: pointer;
     width: 10px;
 }
 
 .Products__display {
-    padding: 10px 0px 0px 17px;
+    padding: 10px 0px 0px 100px;
     display: grid;
     grid-template-columns: auto auto auto auto;
     grid-gap: 20px;

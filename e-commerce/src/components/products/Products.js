@@ -5,46 +5,34 @@ import { items } from "../../data/items";
 import "./products.css"
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import MyButton from "../Button/Button";
 
 
 
 const Products = () => {
 
     return (
-        <>
-            <div className="Products__display" container columns={{ xs: 4, sm: 8, md: 12 }} columnSpacing={{ xs: 1, md: 1 }}>
-
+        <div className="Products__display">
+            <Grid container xs={12} columnSpacing={{ xs: 1, md: 1 }}>
                 {items.map((item) => (
-
-
-
-                    <Grid item xs={3} sm={3} md={2.8} key={item.id} >
-                        <Card sx={{ maxWidth: 250, maxHeight: 490 }} >
-
-                        {item.tag &&
-                                <div>
-                                    <Button className="Promo_Iconz"
-                                        style={{ backgroundColor: '#d3d3d3' }}
-                                    >{item.tag === "" ? null : item.tag}</Button>
-                                </div>
-
-                            }
-
+                    <Grid item xs={3.5} key={item.id} columnSpacing={1} >
+                        <Card sx={{ maxWidth: 350 }} >
+                            {item.tag &&
+                                <div className="Promo_Iconz">
+                                    <Button style={{ backgroundColor: 'hsl(250deg 57% 97%)', opacity: '85%', color: 'blue' }}>{item.tag}</Button>
+                                </div>}
                             <CardMedia
                                 component="img"
                                 height="350"
                                 image={item.image}
                                 alt="shirt" />
-
-                         
-
-
                             <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     {item.name}
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    Price: 100
+                                    {`Price: $${item.price}`}
                                 </Typography>
                                 <div className="Shopping_Button">
                                     <ShoppingCartIcon />
@@ -52,15 +40,15 @@ const Products = () => {
                             </CardContent>
                         </Card>
                         <div className="Favorite_Icon">
-                            <FavoriteIcon />
+                            <FavoriteBorderIcon className='love__icon' />
                         </div>
                     </Grid>
 
 
                 ))}
 
-            </div>
-        </>
+            </Grid>
+        </div>
     )
 
 }
