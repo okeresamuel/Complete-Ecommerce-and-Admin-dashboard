@@ -3,9 +3,9 @@
     padding-top: 20px;
 }
 
-.Shopping_Button{
-    padding:4px 16px 8px 16px;
-    border-radius:6px;
+.Shopping_Button {
+    padding: 4px 16px 8px 16px;
+    border-radius: 6px;
     color: white;
     background-color: blue;
     display: flex;
@@ -16,62 +16,70 @@
     justify-content: center;
 }
 
+.Promo_Iconz {
+    top: 3em;
+    height: 25px;
+    color: blue;
+}
+
 .Favorite_Icon {
     color: #857d80bd;
     position: relative;
     top: -27em;
     left: 13em;
     cursor: pointer;
-    width:10px;
+    width: 10px;
 }
 
-.Products__display{
+.Products__display {
     padding: 10px 0px 0px 17px;
-    display:grid;
+    display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-gap:20px;
+    grid-gap: 20px;
     overflow-y: hidden;
 }
-.Favorite_Icon:hover{
-    color:blue;
 
+.Favorite_Icon:hover {
+    color: blue;
 }
 
-.Line_Icon1{
-    width:10px;
+.Line_Icon1 {
+    width: 10px;
     height: 40px;
     background-color: blue;
     position: absolute;
 }
 
-@media (max-width:1000px){
-    .Products__display{
-        display:grid;
+@media (max-width:1000px) {
+    .Products__display {
+        display: grid;
         grid-template-columns: auto auto auto;
-        grid-gap:0px;
+        grid-gap: 0px;
     }
-@media(max-width:1000px){
-    .Products__display{
-        display: flex;
-       flex-wrap: wrap;
-       justify-content: space-between;
-       padding-right:20px;
-    } 
-}
-@media(max-width:900px){
-    .Products__display{
-       display: grid;
-       grid-template-columns: auto auto ;
-       justify-content: space-evenly;
-    } 
-}
+    @media(max-width:1000px) {
+        .Products__display {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-right: 20px;
+        }
+    }
+    @media(max-width:900px) {
+        .Products__display {
+            display: grid;
+            grid-template-columns: auto auto;
+            justify-content: space-evenly;
+        }
+    }
 }
 
+
 /* smalest screen */
-@media(max-width:700px){
-    .Products__display{
-       display: grid;
-       grid-template-columns: auto;
-       justify-content: space-evenly;
-    } 
+
+@media(max-width:700px) {
+    .Products__display {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: space-evenly;
+    }
 }

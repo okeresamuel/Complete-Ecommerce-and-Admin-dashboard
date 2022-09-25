@@ -15,18 +15,31 @@ const Products = () => {
             <div className="Products__display" container columns={{ xs: 4, sm: 8, md: 12 }} columnSpacing={{ xs: 1, md: 1 }}>
 
                 {items.map((item) => (
-                    
+
 
 
                     <Grid item xs={3} sm={3} md={2.8} key={item.id} >
-                        <Card sx={{ maxWidth: 250 }} >
+                        <Card sx={{ maxWidth: 250, maxHeight: 490 }} >
+
+                        {item.tag &&
+                                <div>
+                                    <Button className="Promo_Iconz"
+                                        style={{ backgroundColor: '#d3d3d3' }}
+                                    >{item.tag === "" ? null : item.tag}</Button>
+                                </div>
+
+                            }
+
                             <CardMedia
                                 component="img"
                                 height="350"
                                 image={item.image}
                                 alt="shirt" />
 
-                             <CardContent>
+                         
+
+
+                            <CardContent>
                                 <Typography gutterBottom variant="h5" component="div">
                                     {item.name}
                                 </Typography>
@@ -34,7 +47,7 @@ const Products = () => {
                                     Price: 100
                                 </Typography>
                                 <div className="Shopping_Button">
-                                <ShoppingCartIcon />
+                                    <ShoppingCartIcon />
                                 </div>
                             </CardContent>
                         </Card>
@@ -42,7 +55,7 @@ const Products = () => {
                             <FavoriteIcon />
                         </div>
                     </Grid>
-                   
+
 
                 ))}
 
