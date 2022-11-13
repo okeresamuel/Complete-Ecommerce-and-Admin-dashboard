@@ -10,15 +10,14 @@ import CartProvider from './context/CartContext';
 
 
 function App() {
-
   return (
-    <CartProvider>
+    <div id="app">
       <Logo />
       <Header />
       <SideBar />
       <Main />
-    </CartProvider>
-  );
+    </div>
+);
 }
 
 export default App;
