@@ -4,9 +4,17 @@ import LanguageIcon from '@mui/icons-material/Language';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import './Header.css';
+import { useContext } from 'react';
+import { useCart,useCartUpdate } from '../../context/CartContext';
 
 
 const Header = () => {
+  //access the global state of the cart
+  const cart = useCart()
+  //update the global state of the cart
+  const cartUpdate = useCartUpdate()
+  
+
     return (<div id='header'>
       <div className="search__box">
       <SearchIcon className='search__Icon' />
@@ -24,7 +32,7 @@ const Header = () => {
         </select> 
         <LanguageIcon  className="Language__Icon" />         
         <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
-        <a href="#closed" className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></a>
+        <a href="#closed" className="Nav__btn2" onClick={cartUpdate}>Your Cart <ShoppingCartIcon className='Shopping__icon'/></a>
         </div> 
 
           <div className="profile__iconDiv">
