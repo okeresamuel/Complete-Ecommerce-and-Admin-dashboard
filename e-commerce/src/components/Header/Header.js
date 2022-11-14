@@ -9,7 +9,6 @@ import { useContext, useRef } from 'react';
 import { useCart,useCartUpdate } from '../../context/CartContext';
 
 
-
 const Header = () => {
   //access the global state of the cart
   const cart = useCart()

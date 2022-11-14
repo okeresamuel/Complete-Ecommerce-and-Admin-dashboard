@@ -39,7 +39,7 @@
     position: absolute;
     z-index: 2;
     height: 100vh;
-    backdrop-filter: blur(82px);
+    background-color: white;
     transform: translate(-200px);
     transition: 300ms;
 }
