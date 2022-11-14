@@ -1,14 +1,14 @@
-#sideBar {
+.sideBar {
     height: 85vh;
     width: 14vw;
     overflow:auto;
     padding-bottom: 50px;
 }
-#sideBar::-webkit-scrollbar{
+.sideBar::-webkit-scrollbar{
     width:10px;
     height: 10px;
 }
-#sideBar::-webkit-scrollbar-thumb{
+.sideBar::-webkit-scrollbar-thumb{
     background-color:blue;
     border-radius:4px;
 }
@@ -31,7 +31,7 @@
     bottom: 120px;
 }
 @media (max-width:1170px){
-#sideBar{
+.sideBar{
     height: 85vh;
     width: 200px;
     overflow: auto;
@@ -39,7 +39,13 @@
     position: absolute;
     z-index: 2;
     height: 100vh;
-    backdrop-filter: blur(82px)
+    backdrop-filter: blur(82px);
+    transform: translate(-200px);
+    transition: 300ms;
+}
+.hide__sidebar{
+    transform: translate(-0px);
+    transition: 300ms;
 }
 
 .sideBarShow__Icon{
