@@ -7,11 +7,17 @@ import PriceSelect from '../PriceSelect/PriceSelect';
 import ApplyBtn from '../ApplyBtn/ApplyBtn';
 import MenuIcon from '@mui/icons-material/Menu';
 import BackToTopIcon from '@mui/icons-material/VerticalAlignTop';
+import {useRef} from "react"
+
 const SideBar = () => {
+    const sideBar__Ref = useRef()
+    const toggleSideBar = () => {
+     sideBar__Ref.current.classList.toggle("hide__sidebar")
+    }
 
      return (
      <>
-     <div id='sideBar' className='greyBorder'>
+     <div className='sideBar greyBorder' ref={sideBar__Ref}>
      <Category />
      <TipeSelect />
      <ColorFilter />
@@ -19,9 +25,10 @@ const SideBar = () => {
      <PriceSelect />
      <ApplyBtn /> 
      </div>
-     <MenuIcon  className="sideBarShow__Icon" />
+     <MenuIcon  className="sideBarShow__Icon" onClick={toggleSideBar}/>
      <a href='Home'><BackToTopIcon className="BackToTop__Icon" /></a>
      </>
+
     )
 }
 

@@ -1,116 +1,152 @@
 #header {
-    height: 15vh;
-    width: 86vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.search__box{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin: 20px;
-    padding:8px 3px 8px 8px;
-    border-radius:5px;
-    width: 300px;
-    background-color: hsl(252deg 56% 98%);
-}
-.search__Input{
- border:none;
- outline:none;
- width: 237px;
- background-color: hsl(252deg 56% 98%)
+  height: 15vh;
+  width: 86vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.search__Icon{
- cursor:pointer;
+.search__box {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+  padding: 8px 3px 8px 8px;
+  border-radius: 5px;
+  width: 300px;
+  background-color: hsl(252deg 56% 98%);
+}
+.search__Input {
+  border: none;
+  outline: none;
+  width: 237px;
+  background-color: hsl(252deg 56% 98%);
 }
 
-.Grain__Icon{
-    background-color: white;
-    border-radius:50%;
-    cursor:pointer;
-}
-.profile__iconsection{
-    display: flex;
-    justify-content: space-between;
-}
-.Nav__btn1,.Nav__btn2{
-    background-color: hsl(250deg 57% 97%);
-    padding: 9px 12px 11px 12px;
-    border-radius: 7px;
-    margin: 13px;
-    color: blue;
-    text-decoration: none;
-    position: relative;
-    top: -5px;
-}
-.love__icon,.Shopping__icon{
- position: relative;  
- top:6px; 
- left:1.9px;
- color: blue;
-}
-.profile__icon{
-    width:35px;
-    position: relative;
-    top: 3px;
-    cursor: pointer;
-}
-.profile__iconDiv{
-    height: 45px;
-    width: 45px;
-    text-align: center;
-    border: 1px solid #e0e3e8;
-    border-radius: 50px;
-    margin:10px;
-}
-.Language__container{
-   position: relative;
-   top: 20px;
-}
-.Select__lang{
-    position: relative;
-    border-color: #e0e3e8;
-    border-radius:4px;
-    top: -6px;
-    padding:10px;
-    cursor: pointer;
-    left: -11px;
-}
-.Language__Icon{
-    color: hsl(260deg 2% 70%);
+.exitIcon{
+  display: none !important;
 }
 
-@media (max-width: 1000px){
-.Language__container{
+.search__Icon {
+  cursor: pointer;
+}
+
+.Grain__Icon {
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.profile__iconsection {
+  display: flex;
+  justify-content: space-between;
+}
+.Nav__btn1,
+.Nav__btn2 {
+  background-color: hsl(250deg 57% 97%);
+  padding: 9px 12px 11px 12px;
+  border-radius: 7px;
+  margin: 13px;
+  color: blue;
+  text-decoration: none;
+  position: relative;
+  top: -5px;
+}
+.love__icon,
+.Shopping__icon {
+  position: relative;
+  top: 6px;
+  left: 1.9px;
+  color: blue;
+}
+.profile__icon {
+  width: 35px;
+  position: relative;
+  top: 3px;
+  cursor: pointer;
+}
+.profile__iconDiv {
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  border: 1px solid #e0e3e8;
+  border-radius: 50px;
+  margin: 10px;
+}
+.Language__container {
+  position: relative;
+  top: 20px;
+}
+
+.Select__lang {
+  position: relative;
+  border-color: #e0e3e8;
+  border-radius: 4px;
+  top: -6px;
+  padding: 10px;
+  cursor: pointer;
+  left: -11px;
+}
+.Language__Icon {
+  color: hsl(260deg 2% 70%);
+}
+.opennav__menu,.exitIcon {
+  display: none;
+}
+
+/* mobile view for navmenu */
+@media (max-width: 1000px) {
+  .Language__container {
     position: absolute;
     right: 70px;
     display: grid;
     background-color: rgb(255, 255, 255);
-    height: 192px;
+    height: 196px;
     border-radius: 5px;
     z-index: 2;
-    box-shadow: -2px 5px 11px 4px rgba(0,0,0,0.25);
-    -webkit-box-shadow: -2px 5px 11px 4px rgba(0,0,0,0.25);
-    -moz-box-shadow: -2px 5px 11px 4px rgba(0,0,0,0.25);
-}
-.Nav__btn1,.Nav__btn2{
+    box-shadow: -2px 5px 11px 4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: -2px 5px 11px 4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: -2px 5px 11px 4px rgba(0, 0, 0, 0.25);
+    visibility: hidden;
+  }
+  .showLanguage__container {
+    visibility: visible;
+  }
+ 
+  .Nav__btn1,
+  .Nav__btn2 {
     background-color: hsl(250deg 57% 97%);
     padding: 3px 12px 6px 12px;
     border-radius: 7px;
     margin: 13px;
     color: blue;
     text-decoration: none;
-
-}
-.Select__lang{
+  }
+  .exitIcon {
+    position: absolute;
+    right: -5px;
+    top:-5px;
+    cursor:pointer;
+    color: rgba(0, 0, 0, 0.705);
+  }
+  .exitIcon{
+    display: block !important;
+  }
+  .Select__lang {
     position: sticky;
     top: 41px;
     width: 119px;
-    margin: auto;    
-}
-.Language__Icon{
+    margin: auto;
+  }
+  .Language__Icon {
     visibility: hidden;
-}
+  }
+  .opennav__menu {
+    display: block;
+    position: absolute;
+    right: 87px;
+    padding: 9px;
+    border: 1px solid rgb(48, 16, 230);
+    font-family: system-ui;
+    border-radius: 28px;
+  }
 }

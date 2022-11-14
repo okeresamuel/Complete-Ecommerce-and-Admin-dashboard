@@ -3,18 +3,15 @@ import { Card, CardMedia, CardContent, Typography, CardActions, Grid, FormRow, B
 import { margin } from "@mui/system";
 import { items } from "../../data/items";
 import "./products.css"
-import FavoriteIcon from '@mui/icons-material/Favorite';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import MyButton from "../Button/Button";
 
 
 
 const Products = () => {
-
     return (
         <div className="Products__display">
-            <Grid container xs={12} columnSpacing={{ xs: 1, md: 1 }}>
+            <Grid container xs={12} columnSpacing={{ xs: 5, md: 2 }}>
                 {items.map((item) => (
                     <Grid item xs={3.5} key={item.id} columnSpacing={1} >
                         <Card sx={{ maxWidth: 350 }} >
@@ -43,14 +40,10 @@ const Products = () => {
                             <FavoriteBorderIcon className='love__icon' />
                         </div>
                     </Grid>
-
-
                 ))}
-
             </Grid>
         </div>
     )
 
 }
-
 export default Products;
