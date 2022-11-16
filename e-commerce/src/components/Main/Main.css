@@ -2,17 +2,17 @@
     height: 85vh;
     width: 86vw;
     overflow: scroll;
-    overflow-x: auto;
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 
 #main::-webkit-scrollbar{
-    width:15px;
+    width:12px;
     height: 10px;
   }
   #main::-webkit-scrollbar-thumb{
-    border-radius:6px;
+    border-radius:4px;
     background-color: blue;
   }
 
