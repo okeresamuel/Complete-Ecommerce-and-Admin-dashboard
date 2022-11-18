@@ -33,6 +33,5 @@ const CartProvider = ({ childern }) => {
 
 }
 
-
 export default CartProvider
 export {useCart,useCartUpdate}
