@@ -1,6 +1,6 @@
 .shirt__container{
     width:320px;
-    border:1px solid grey;
+    border:1px solid rgb(128, 128, 128);
     border-radius:10px;
     position: relative;
 }
@@ -58,7 +58,6 @@ align-items: center;
         overflow-x:scroll;
 }
 }
-
 @media(min-width:980px){
     .Products__display {
         grid-template-columns: repeat(3, 0fr);
