@@ -7,6 +7,7 @@ import ExitIcon from '@mui/icons-material/HighlightOff';
 import {Link} from "react-router-dom"
 import './Header.css';
 import { useContext, useRef } from 'react';
+import {CartContext, Context} from '../../context/CartContext';
 // import { useCart,useCartUpdate } from '../../context/CartContext';
 
 
@@ -15,6 +16,8 @@ const Header = () => {
   // const cart = useCart()
   // //update the global state of the cart
   // const cartUpdate = useCartUpdate()
+  const globalState = useContext(CartContext)  
+  console.log(globalState)
 
   
     const languageConatainer__ref = useRef()
@@ -48,6 +51,7 @@ const Header = () => {
         <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
         <Link to="/cart" className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></Link>
         </div> 
+        <div className="Cart_Counter"> {globalState.state.length}</div>
       
 
          <div className="profile__iconDiv">
