@@ -7,14 +7,14 @@ import ExitIcon from '@mui/icons-material/HighlightOff';
 import {Link} from "react-router-dom"
 import './Header.css';
 import { useContext, useRef } from 'react';
-import { useCart,useCartUpdate } from '../../context/CartContext';
+// import { useCart,useCartUpdate } from '../../context/CartContext';
 
 
 const Header = () => {
-  //access the global state of the cart
-  const cart = useCart()
-  //update the global state of the cart
-  const cartUpdate = useCartUpdate()
+  // //access the global state of the cart
+  // const cart = useCart()
+  // //update the global state of the cart
+  // const cartUpdate = useCartUpdate()
 
   
     const languageConatainer__ref = useRef()
@@ -46,7 +46,7 @@ const Header = () => {
         </select> 
         <LanguageIcon  className="Language__Icon" />         
         <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
-        <Link to="/cart" className="Nav__btn2" onClick={cartUpdate}>Your Cart <ShoppingCartIcon className='Shopping__icon'/></Link>
+        <Link to="/cart" className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></Link>
         </div> 
       
 

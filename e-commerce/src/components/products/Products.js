@@ -4,10 +4,20 @@ import { items } from "../../data/items";
 import "./products.css"
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-
+import { CartContext } from '../../context/CartContext';
+import { useContext } from "react";
 
 
 const Products = () => {
+
+//global context for the cart
+const globalState = useContext(CartContext)  
+console.log(globalState)
+
+//setup dispatch
+const dispatch = globalState.dispatch
+
+
     return (
         <div className="Products__display">  
             {items.map((item) => (
@@ -28,7 +38,7 @@ const Products = () => {
                       <h3>{item.name}</h3>
                       <span className="priceand__cartbtnContainer">
                       {`Price: $${item.price}`}
-                      <ShoppingCartIcon className="Shopping_Button" />
+                      <ShoppingCartIcon className="Shopping_Button" onClick={()=>dispatch({type: 'ADD',payload:item})} />
                       </span>
                      </div>
 
