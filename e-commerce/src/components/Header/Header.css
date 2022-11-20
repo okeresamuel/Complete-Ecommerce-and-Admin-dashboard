@@ -40,6 +40,7 @@
 .profile__iconsection {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .Nav__btn1,
 .Nav__btn2 {
@@ -49,19 +50,16 @@
   margin: 13px;
   color: blue;
   text-decoration: none;
-  position: relative;
   top: -5px;
 }
 .love__icon,
 .Shopping__icon {
-  position: relative;
   top: 6px;
   left: 1.9px;
   color: blue;
 }
 .profile__icon {
   width: 35px;
-  position: relative;
   top: 3px;
   cursor: pointer;
 }
@@ -74,12 +72,10 @@
   margin: 10px;
 }
 .Language__container {
-  position: relative;
   top: 20px;
 }
 
 .Select__lang {
-  position: relative;
   border-color: #e0e3e8;
   border-radius: 4px;
   top: -6px;
@@ -92,6 +88,21 @@
 }
 .opennav__menu,.exitIcon {
   display: none;
+}
+
+.Cart_Counter{
+  background-color: crimson;
+  color: white;
+  padding: 7px;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
+  line-height: 0;
+  justify-content: center;
+  align-items: center;
 }
 
 /* mobile view for navmenu */
