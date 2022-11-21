@@ -50,8 +50,9 @@ const Header = () => {
         <LanguageIcon  className="Language__Icon" />         
         <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
         <Link to="/cart" className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></Link>
+        <div className="Cart_Counter">{globalState.state.length}</div>
         </div> 
-        <div className="Cart_Counter"> {globalState.state.length}</div>
+      
       
 
          <div className="profile__iconDiv">
