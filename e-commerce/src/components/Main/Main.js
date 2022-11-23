@@ -5,12 +5,12 @@ import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import PageButton from '../PageButtons/PageButton';
 
 
-const Main = () => {
+const Main = ({searchValue}) => {
     return (
             <div id='main' className='greyBorder'>
             <Breadcrumb />
             <ItemLable />
-            <Products />
+            <Products searchValue={searchValue}/>
             <PageButton />
             </div>
             )
