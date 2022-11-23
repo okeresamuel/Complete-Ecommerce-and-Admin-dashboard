@@ -6,20 +6,16 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ExitIcon from '@mui/icons-material/HighlightOff';
 import {Link} from "react-router-dom"
 import './Header.css';
-import { useContext, useRef } from 'react';
-import {CartContext, Context} from '../../context/CartContext';
-// import { useCart,useCartUpdate } from '../../context/CartContext';
+import { useContext, useRef,} from 'react';
+import {CartContext,} from '../../context/CartContext';
 
 
-const Header = () => {
-  // //access the global state of the cart
-  // const cart = useCart()
-  // //update the global state of the cart
-  // const cartUpdate = useCartUpdate()
-  const globalState = useContext(CartContext)  
-  console.log(globalState)
+const Header = ({setSearchValue}) => {
 
-  
+    //cart global state.
+    const globalState = useContext(CartContext)
+    
+    // Hide and show cart for mobile phones
     const languageConatainer__ref = useRef()
     const languageConatainerExiticon__ref = useRef()
     const  ShowChart = () => {
@@ -30,11 +26,12 @@ const Header = () => {
       languageConatainer__ref.current.classList.remove("showLanguage__container")
       languageConatainerExiticon__ref.current.style.visibility = "hidden"
     }
-    
+ 
+
     return (<div id='header' className='greyBorder'>
       <div className="search__box">
       <SearchIcon className='search__Icon' />
-      <input className='search__Input' type="search" placeholder='Search among 100+ products'></input>
+      <input className='search__Input' type="search" placeholder='Search among 100+ products' onChange={(e) => {setSearchValue(e.target.value)}}></input>
       <GrainIcon className='Grain__Icon' />
       </div>
       
@@ -62,6 +59,5 @@ const Header = () => {
       <button className='opennav__menu' onClick={ShowChart}>Show Cart</button>
     </div>)
 }
-
 
 export default Header;
