@@ -53,7 +53,9 @@ const Header = ({setSearchValue}) => {
       
 
          <div className="profile__iconDiv">
+         <Link to={"/Aparel/Signup"}>
          <img  className="profile__icon" src='https://cdn-icons-png.flaticon.com/128/5349/5349022.png' alt='profile__pic'/>
+         </Link>
         </div>
        </div> 
       <button className='opennav__menu' onClick={ShowChart}>Show Cart</button>
