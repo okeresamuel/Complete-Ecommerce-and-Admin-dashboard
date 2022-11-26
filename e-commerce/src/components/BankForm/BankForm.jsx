@@ -1,22 +1,10 @@
 import "./BankForm.css"
-import { createContext, useState } from "react";
+import { useState } from "react";
 import BankFormCheckBox from "./BankFormCheckBox";
-import { useContext } from "react";
-
-const CheckBoxValue = createContext(false)
-
-const Context = ({ value, children }) => {
-    return (
-        <CheckBoxValue.Provider value={value} >
-            {children}
-        </CheckBoxValue.Provider>
-    )
-}
 
 const BankForm = () => {
     const [inputs, setInputs] = useState({}); // creates a dynamic object for me to add form entries too.
 
-    const checkBoxValue = useContext(CheckBoxValue)
 
     const handleChange = (event) => {
         const name = event.target.name; // key
@@ -55,7 +43,7 @@ const BankForm = () => {
 
                 {/* Checkbox 1 */}
                 <BankFormCheckBox
-                    name="address2"
+                    inputName="address2"
                     id="address2"
                     label="Add Address 2 line?"
                 />
@@ -103,8 +91,22 @@ const BankForm = () => {
                     />
                 </label>
 
+                <label> Billing Address
+                    <input
+                        className="checkoutFormInput"
+                        type="text"
+                        name="billinb"
+                        value={inputs.billing || ""}
+                        onChange={handleChange}
+                    />
+                </label>
+
                 {/* Checkbox 2 */}
-                <BankFormCheckBox name="shippingAddress" id="shippingAddress" label="Different Shipping Address?" />
+                <BankFormCheckBox 
+                inputName="shippingAddress" 
+                id="shippingAddress" 
+                label="Different Shipping Address?" 
+                />
 
                 {/* <label className="checkboxLabel">
                     <input
@@ -116,16 +118,6 @@ const BankForm = () => {
                         onChange={handleChange}
                         /> Different Shipping Address?
                 </label> */}
-
-                <label> Shipping
-                    <input
-                        className="checkoutFormInput"
-                        type="text"
-                        name="shipping"
-                        value={inputs.shipping || ""}
-                        onChange={handleChange}
-                    />
-                </label>
 
                 <label> Card Number
                     <input
