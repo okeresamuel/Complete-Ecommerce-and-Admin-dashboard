@@ -37,7 +37,7 @@ const Products = ({searchValue}) => {
 
             <div className="sub__shirtcontainer">
               <h3>{item.name}</h3>
-              <span className="priceand__cartbtnContainer">
+               <span className="priceand__cartbtnContainer">
                 {`Price: $${item.price}`}
                 <ShoppingCartIcon className="Shopping_Button" onClick={(()=>{ dispatch({ type: "ADD", payload: item }) })} />
               </span>

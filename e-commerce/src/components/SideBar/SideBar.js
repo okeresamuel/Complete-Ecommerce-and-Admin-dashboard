@@ -15,7 +15,9 @@ const SideBar = () => {
      sideBar__Ref.current.classList.toggle("hide__sidebar")
     }
 
-     return (
+    
+    
+    return (
      <>
      <div className='sideBar greyBorder' ref={sideBar__Ref}>
      <Category />

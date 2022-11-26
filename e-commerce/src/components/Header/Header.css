@@ -27,7 +27,10 @@
 .exitIcon{
   display: none !important;
 }
-
+.user__name{
+  position: relative;
+  top:5px;
+}
 .search__Icon {
   cursor: pointer;
 }
