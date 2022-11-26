@@ -1,6 +1,8 @@
 const mongoose = require("mongoose")
+require("dotenv").config()
 
-mongoose.connect("mongodb://localhost:27017/test") ? console.log("connecting to mongodb...") : console.log("mongodb error")
+
+mongoose.connect(process.env.dburl) ? console.log("connecting to mongodb...") : console.log("mongodb error")
 mongoose.connection.on("connected", ()=>{
     console.log("mongodb connected".yellow)
 })

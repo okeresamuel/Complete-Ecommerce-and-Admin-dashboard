@@ -6,15 +6,11 @@ const helmet = require("helmet")
 const User = require("../backend/models/user")
 const localStrategy = require("passport-local")
 const session = require("express-session")
-
-
-// BASE DEPENDENCY
 require("../backend/config/db")
-require("dotenv").config()
 require("colors")
 
 app.use(session({
-    secret: "jtzdfcv",
+    secret: process.env.SESSION__SECREAT,
     resave: true,
     saveUninitialized: true,
 }))

@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken")
-
+require("dotenv").config()
 
 
 const protect = (req, res, next) =>{
@@ -8,7 +8,7 @@ const protect = (req, res, next) =>{
         res.status("401").json("unauthorized no token found...")
     }
     try {
-        const decoded = jwt.verify(token, "sdusgudgsiug")
+        const decoded = jwt.verify(token, process.env.SECREAT)
         req.user = decoded
         next()   
     } catch (error) {
