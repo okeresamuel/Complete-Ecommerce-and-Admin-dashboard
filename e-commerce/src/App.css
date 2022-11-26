@@ -1,3 +1,12 @@
+body{
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 :root {
   --borderColor: #F2F0F1
 }
@@ -11,4 +20,47 @@
 .greyBorder {
   border: 1px solid var(--borderColor);
   box-sizing: border-box;
+}
+
+
+/* login and logout form styles */
+
+.login__container{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:60vw;
+  height:60vh;
+  border-radius:5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border:1px solid rgba(0, 0, 255, 0.507);
+  box-shadow: 1px 2px 24px -7px rgba(0, 0, 0, 0.856);
+-webkit-box-shadow: 1px 2px 24px -7px rgba(0, 0, 0, 0.808);
+-moz-box-shadow: 1px 2px 24px -7px rgba(0,0,0,1);
+}
+.inputs{
+    display: grid;
+    width: 53%;
+}
+.username,.password,.Login__btn{
+    padding:11px;
+    margin-top: 8px;
+    margin-bottom:8px;
+    border:1px solid rgba(0, 0, 255, 0.301);
+    outline-color:blue !important;
+    border-radius:5px;
+}
+
+.Apparel__loginText{
+    text-align: center;
+    color:blue;
+}
+.Login__btn{
+    background-color:blue;
+    color:white;
+    cursor:pointer;
+    border:none;
 }

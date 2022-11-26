@@ -1,7 +1,7 @@
 import React from 'react'
 import ArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
-import "../TipeSelect/TipeSelect.css"
+import "./TipeSelect.css"
 import Checkbox from '../Checkbox/Checkbox';
 function TipeSelect() {
   return (
