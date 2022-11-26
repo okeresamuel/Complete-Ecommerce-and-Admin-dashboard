@@ -1,0 +1,30 @@
+#checkoutForm {
+    display: flex;
+    width: 40vw;
+    height: 80vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+form {
+    overflow-y: scroll;
+}
+
+.checkoutFormInput {
+    margin-top: 10px;
+    padding: 5px;
+    padding-right: 7rem;
+}
+
+label {
+    display: flex;
+    padding-bottom: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.checkboxLabel {
+    display: flex;
+    flex-direction: row;
+}
