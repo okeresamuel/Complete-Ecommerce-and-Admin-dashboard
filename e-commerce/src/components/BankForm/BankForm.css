@@ -40,7 +40,12 @@ label {
     flex-direction: row;
 }
 
+
 .numberInput::-webkit-inner-spin-button, 
 .numberInput::-webkit-outter-spin-button {
     opacity: -1;
+}
+
+.displayNone {
+    display: none
 }

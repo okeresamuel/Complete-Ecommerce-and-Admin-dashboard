@@ -12,13 +12,14 @@ console.log(globalState)
 
     return (
         <div id='checkout'>
-            <div id='deraun' style={{
+            {/* Deraun's Component Goes Here!!! Use the basic styling as shown on the container for it. */}
+            {/* <div id='deraun' style={{
                 height:"80vh",
                 width:"40vw",
                 backgroundColor:"red"
             }}>
 
-            </div>
+            </div> */}
             <BankForm />
         </div>
     )
