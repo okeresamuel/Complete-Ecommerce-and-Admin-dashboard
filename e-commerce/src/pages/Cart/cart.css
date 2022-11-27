@@ -1,0 +1,7 @@
+#checkout {
+    display: flex;
+    max-width: 80vw;
+    max-height: 80vh;
+    margin-top: 25px;
+    margin-left: 10px;
+}

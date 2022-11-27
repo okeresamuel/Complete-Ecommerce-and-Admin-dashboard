@@ -1,0 +1,51 @@
+#checkoutForm {
+    display: flex;
+    width: 40vw;
+    height: 80vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    border: solid 1px grey;
+}
+
+form {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.checkoutFormInput {
+    margin-top: 10px;
+    padding: 5px;
+    padding-right: 7rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    border: solid 1px rgb(0, 0, 0);
+}
+
+.checkoutFormInput:focus {
+    background-color: #baeeaa;
+    outline: none;
+    border: 2px solid rgb(126, 126, 126);
+  }
+
+label {
+    display: flex;
+    padding-bottom: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.checkboxLabel {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.numberInput::-webkit-inner-spin-button, 
+.numberInput::-webkit-outter-spin-button {
+    opacity: -1;
+}
+
+.displayNone {
+    display: none
+}

@@ -7,7 +7,7 @@ import ExitIcon from '@mui/icons-material/HighlightOff';
 import {useSelector} from "react-redux"
 import {Link} from "react-router-dom"
 import './Header.css';
-import { useContext, useRef,} from 'react';
+import { useContext, useRef} from 'react';
 import {CartContext,} from '../../context/CartContext';
 
 
