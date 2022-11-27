@@ -1,10 +1,10 @@
 import "./BankForm.css"
 import { useState } from "react";
 import BankFormCheckBox from "./BankFormCheckBox";
+import { PassedValues } from "../../context/CartContext";
 
 const BankForm = () => {
     const [inputs, setInputs] = useState({}); // creates a dynamic object for me to add form entries too.
-
 
     const handleChange = (event) => {
         const name = event.target.name; // key
@@ -42,22 +42,14 @@ const BankForm = () => {
                 </label>
 
                 {/* Checkbox 1 */}
-                <BankFormCheckBox
-                    inputName="address2"
-                    id="address2"
-                    label="Add Address 2 line?"
-                />
-                {/* <label className="checkboxLabel">
-                    <input
-                    defaultChecked
-                        className="checkoutFormInput"
-                        type="checkbox"
-                        name="address2"
-                        id="address2"
-                        value={inputs.address2 || false}
-                        onChange={handleChange}
-                        /> Add Address 2 line?
-                </label> */}
+
+                <PassedValues.Provider value={{ inputs, setInputs }}>
+                    <BankFormCheckBox
+                        inputName="address2"
+                        label="Add Address 2 line?"
+                    />
+                </PassedValues.Provider>
+
 
                 <label> Zip Code
                     <input
@@ -95,29 +87,19 @@ const BankForm = () => {
                     <input
                         className="checkoutFormInput"
                         type="text"
-                        name="billinb"
+                        name="billing"
                         value={inputs.billing || ""}
                         onChange={handleChange}
                     />
                 </label>
 
                 {/* Checkbox 2 */}
-                <BankFormCheckBox 
-                inputName="shippingAddress" 
-                id="shippingAddress" 
-                label="Different Shipping Address?" 
-                />
-
-                {/* <label className="checkboxLabel">
-                    <input
-                    defaultChecked
-                        type="checkbox"
-                        name="shippingAddress"
-                        id="shippingAddress"
-                        value={inputs.shippingAddress || false}
-                        onChange={handleChange}
-                        /> Different Shipping Address?
-                </label> */}
+                <PassedValues.Provider value={{ inputs, setInputs }}>
+                    <BankFormCheckBox
+                        inputName="shippingAddress"
+                        label="Different Shipping Address?"
+                    />
+                </PassedValues.Provider>
 
                 <label> Card Number
                     <input

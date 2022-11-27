@@ -1,11 +1,13 @@
+import { useContext } from "react";
 import { useState } from "react";
+import { PassedValues } from "../../context/CartContext";
 
 const BankFormCheckBox = (props) => {
-    const { inputName, id, label } = props
+    const { inputName, label } = props
 
     const [checked, setChecked] = useState(false);
 
-    const [inputs, setInputs] = useState({}); // creates a dynamic object for me to add form entries too.
+    const { inputs, setInputs } = useContext(PassedValues); // creates a dynamic object for me to add form entries too.
 
     const handleChange = (event) => {
         const name = event.target.name; // key
@@ -25,7 +27,7 @@ const BankFormCheckBox = (props) => {
                         className="checkoutFormInput"
                         type="text"
                         name={inputName}
-                        value={inputs.inputName || ""} // outputted value to be read. Controls where the value goes, user input controls the state of the value.
+                        value={inputs[inputName] || ""} // outputted value to be read. Controls where the value goes, user input controls the state of the value.
                         onChange={handleChange}
                     />
                 </label>
@@ -36,7 +38,7 @@ const BankFormCheckBox = (props) => {
                         type="checkbox"
                         name={inputName}
                         checked={checked}
-                        id={id}
+                        id={inputName}
                         onChange={handleCheckboxChange}
                     /> {label}
                 </label>
@@ -51,7 +53,7 @@ const BankFormCheckBox = (props) => {
                 type="checkbox"
                 name={inputName}
                 checked={checked}
-                id={id}
+                id={inputName}
                 onChange={handleCheckboxChange}
             /> {label}
         </label>
