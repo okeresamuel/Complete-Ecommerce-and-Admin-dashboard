@@ -3,6 +3,7 @@
     width: 14vw;
     overflow:auto;
     padding-bottom: 50px;
+    position: relative;
 }
 .sideBar::-webkit-scrollbar{
     width:10px;
@@ -12,6 +13,7 @@
     background-color:blue;
     border-radius:4px;
 }
+
 
 
 .sideBarShow__Icon,.BackToTop__Icon{
@@ -31,6 +33,7 @@
     bottom: 120px;
 }
 @media (max-width:1170px){
+
 .sideBar{
     height: 85vh;
     width: 200px;

@@ -1,0 +1,12 @@
+.Logout__btn{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, 50%);
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 12px 55px;
+    border-radius: 5px;
+    cursor: pointer;
+}

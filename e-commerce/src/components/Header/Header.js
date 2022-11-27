@@ -4,6 +4,7 @@ import LanguageIcon from '@mui/icons-material/Language';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ExitIcon from '@mui/icons-material/HighlightOff';
+import {useSelector} from "react-redux"
 import {Link} from "react-router-dom"
 import './Header.css';
 import { useContext, useRef} from 'react';
@@ -11,7 +12,7 @@ import {CartContext,} from '../../context/CartContext';
 
 
 const Header = ({setSearchValue}) => {
-
+  
     //cart global state.
     const globalState = useContext(CartContext)
     
@@ -26,7 +27,9 @@ const Header = ({setSearchValue}) => {
       languageConatainer__ref.current.classList.remove("showLanguage__container")
       languageConatainerExiticon__ref.current.style.visibility = "hidden"
     }
- 
+     
+    
+    const {user} = useSelector((state)=> state.auth)
 
     return (<div id='header' className='greyBorder'>
       <div className="search__box">
@@ -51,9 +54,12 @@ const Header = ({setSearchValue}) => {
         </div> 
       
       
-
+         {/* check if use exist before redirecting to user profile  */}
          <div className="profile__iconDiv">
+         <Link to={user ? "/Aparel/Userprofile" : "/Aparel/Signup"}>
          <img  className="profile__icon" src='https://cdn-icons-png.flaticon.com/128/5349/5349022.png' alt='profile__pic'/>
+         <span className='user__name'>{user ? user.username.slice(0, 3) : ""}</span>
+         </Link>
         </div>
        </div> 
       <button className='opennav__menu' onClick={ShowChart}>Show Cart</button>

@@ -53,8 +53,8 @@ const BankForm = () => {
 
                 <label> Zip Code
                     <input
-                        className="checkoutFormInput"
-                        type="text"
+                        className="checkoutFormInput numberInput"
+                        type="number"
                         name="zipCode"
                         value={inputs.zipCode || ""}
                         onChange={handleChange}
@@ -66,7 +66,7 @@ const BankForm = () => {
                 <label> Phone Number
                     <input
                         className="checkoutFormInput"
-                        type="text"
+                        type="tel"
                         name="phone"
                         value={inputs.phone || ""}
                         onChange={handleChange}
@@ -76,7 +76,7 @@ const BankForm = () => {
                 <label> Email
                     <input
                         className="checkoutFormInput"
-                        type="text"
+                        type="email"
                         name="email"
                         value={inputs.email || ""}
                         onChange={handleChange}
@@ -103,8 +103,8 @@ const BankForm = () => {
 
                 <label> Card Number
                     <input
-                        className="checkoutFormInput"
-                        type="text"
+                        className="checkoutFormInput numberInput"
+                        type="number"
                         name="cardNumber"
                         value={inputs.cardNumber || ""}
                         onChange={handleChange}
@@ -114,7 +114,7 @@ const BankForm = () => {
                 <label> Expiration Date
                     <input
                         className="checkoutFormInput"
-                        type="text"
+                        type="date"
                         name="expiration"
                         value={inputs.expiration || ""}
                         onChange={handleChange}
@@ -123,18 +123,19 @@ const BankForm = () => {
 
                 <label> Security Code
                     <input
-                        className="checkoutFormInput"
-                        type="text"
+                        className="checkoutFormInput numberInput"
+                        type="number"
                         name="code"
                         value={inputs.code || ""}
                         onChange={handleChange}
                     />
                 </label>
+
                 <input
                     className="checkoutButton"
                     type="submit"
-                    value={"Checkout"}
-                // onSubmit={alert("Checkout Complete")}
+                    value="Checkout"
+                    onSubmit={() => alert("Checkout Complete")}
                 />
             </form>
         </div>
