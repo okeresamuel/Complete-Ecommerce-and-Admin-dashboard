@@ -17,11 +17,9 @@ const Img = styled('img')({
 
 const subtotal = (prices) => {
     let sum = 0
-
     prices.forEach(element => {
         sum += element.price
     });
-
     return "$" + sum
 };
 
@@ -29,16 +27,11 @@ const subtotal = (prices) => {
 const Cart = () => {
 
     const globalState = useContext(CartContext)
-    console.log(globalState.state)
-
     return (
         <div id="checkout">
-
             <div >{"My Cart"}</div>
-
-            <div>{globalState.state.map((item) => (
+            <div>{globalState.state?.map((item) => (
                 <>
-
                     <Paper
                         sx={{
                             p: 2,
