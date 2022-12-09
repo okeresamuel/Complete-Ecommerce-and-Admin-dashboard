@@ -7,8 +7,8 @@ import { BrowserRouter as Router, Routes, Route, } from "react-router-dom"
 import { Cart, Errorpage, SignUp, Login, Userprofile} from "./pages/pageexporter"
 import { ToastContainer} from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Context } from './context/CartContext';
 import './App.css';
+import { Context } from './context/CartContext';
 
 
 
@@ -19,7 +19,7 @@ function App() {
  
  return (
     <div id="app">
-          <Context>
+        <Context>
           <Router>
           <Logo />
           <Header setSearchValue={setSearchValue}/>
@@ -35,8 +35,8 @@ function App() {
             </>
           </Routes>
         </Router>
-      <ToastContainer />
       </Context>
+      <ToastContainer />
     </div>
   );
 }

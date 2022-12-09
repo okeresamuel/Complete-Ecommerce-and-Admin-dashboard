@@ -1,5 +1,3 @@
-
-
 export const items = [{
         id: 1,
         name: "Stripe Hoodie",
@@ -92,5 +90,3 @@ export const items = [{
         tag: ""
     }
 ]
-
-    

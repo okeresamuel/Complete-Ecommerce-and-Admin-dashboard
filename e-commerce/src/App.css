@@ -27,11 +27,11 @@ body{
 
 .login__container{
   position: absolute;
-  top:55%;
+  top:50%;
   left:50%;
   transform: translate(-50%, -50%);
   width:60vw;
-  height:70vh;
+  height:60vh;
   border-radius:5px;
   display: flex;
   justify-content: center;
@@ -44,7 +44,6 @@ body{
 .inputs{
     display: grid;
     width: 53%;
-    margin:auto;
 }
 .username,.password,.Login__btn{
     padding:11px;
