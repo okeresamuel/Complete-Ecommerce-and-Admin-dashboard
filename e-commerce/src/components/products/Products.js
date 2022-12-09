@@ -19,7 +19,7 @@ const Products = ({searchValue}) => {
   if(foundItem >= 0){
     toast.info(`${item.name} already in cart`)
   }else{
-    dispatch({ type: "ADD", payload: item })
+    dispatch({ type: "ADD", payload:item })
     toast.success(`${item.name} added to cart`)    
   }
 }
