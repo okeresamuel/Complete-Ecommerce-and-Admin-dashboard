@@ -2,7 +2,6 @@ import { createContext, useReducer } from "react"
 
 //create a new context for the cart state and the function change the state
 export const CartContext = createContext()
-export const searchContext = createContext()
 export const PassedValues = createContext({})
 
 export const Context = (props) => {
@@ -14,8 +13,6 @@ export const Context = (props) => {
     {
       case 'ADD':
         return [...state, action.payload]
-      case 'SEARCH':
-        return action.payload
       default: return state
     }
   }

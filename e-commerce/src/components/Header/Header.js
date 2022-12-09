@@ -7,15 +7,17 @@ import ExitIcon from '@mui/icons-material/HighlightOff';
 import {useSelector} from "react-redux"
 import {Link} from "react-router-dom"
 import './Header.css';
-import { useRef, } from 'react';
-
+import { useContext, useRef,} from 'react';
+import {CartContext,} from '../../context/CartContext';
 
 
 const Header = ({setSearchValue}) => {
   
     //cart global state.
-    const cartItem = JSON.parse(localStorage.getItem("item"))
-   
+    const globalState = useContext(CartContext)
+    console.log(globalState)
+
+    
     // Hide and show cart for mobile phones
     const languageConatainer__ref = useRef()
     const languageConatainerExiticon__ref = useRef()
@@ -50,7 +52,7 @@ const Header = ({setSearchValue}) => {
         <LanguageIcon  className="Language__Icon" />         
         <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
         <Link to="/cart" className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></Link>
-        <div className="Cart_Counter">{cartItem ?cartItem.state.length : 0}</div>
+        <div className="Cart_Counter">{globalState.state?.length}</div>
         </div> 
       
       
