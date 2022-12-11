@@ -3,7 +3,7 @@ export const items = [{
         name: "Stripe Hoodie",
         price: 20,
         image: "https://images.asos-media.com/products/bershka-hoodie-with-vertical-stripes-in-white/14161463-1-white?$n_640w$&wid=513&fit=constrain",
-        discount: false,
+        discount: true,
         oldPrice: 200,
         favorite: false,
         tag: "New"
