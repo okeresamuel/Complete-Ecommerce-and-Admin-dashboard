@@ -52,6 +52,7 @@ const BankForm = () => {
                             className="checkoutFormInput"
                             type="text"
                             name="fullName"
+                            placeholder="Full Name"
                             value={inputs.fullName || ""} // outputted value to be read. Controls where the value goes, user input controls the state of the value.
                             onChange={handleChange}
                         />
@@ -61,6 +62,7 @@ const BankForm = () => {
                         <input
                             className="checkoutFormInput"
                             type="text"
+                            placeholder="Street Address"
                             name="address"
                             value={inputs.address || ""}
                             onChange={handleChange}
@@ -78,6 +80,7 @@ const BankForm = () => {
                             className="checkoutFormInput numberInput"
                             type="number"
                             name="zipCode"
+                            placeholder="Zip Code"
                             value={inputs.zipCode || ""}
                             onChange={handleChange}
                         />
@@ -85,11 +88,12 @@ const BankForm = () => {
 
                     {/* City and State autofill */}
 
-                    <label> Phone Number
+                    <label>Phone Number
                         <input
                             className="checkoutFormInput"
                             type="tel"
                             name="phone"
+                            placeholder="Phone Number"
                             value={inputs.phone || ""}
                             onChange={handleChange}
                         />
@@ -100,6 +104,7 @@ const BankForm = () => {
                             className="checkoutFormInput"
                             type="email"
                             name="email"
+                            placeholder="Email"
                             value={inputs.email || ""}
                             onChange={handleChange}
                         />
@@ -110,6 +115,7 @@ const BankForm = () => {
                             className="checkoutFormInput"
                             type="text"
                             name="billing"
+                            placeholder="Billing Address"
                             value={inputs.billing || ""}
                             onChange={handleChange}
                         />
@@ -126,6 +132,7 @@ const BankForm = () => {
                             className="checkoutFormInput numberInput"
                             type="number"
                             name="cardNumber"
+                            placeholder="Card Number"
                             value={inputs.cardNumber || ""}
                             onChange={handleChange}
                         />
@@ -136,6 +143,7 @@ const BankForm = () => {
                             className="checkoutFormInput"
                             type="date"
                             name="expiration"
+                            placeholder="Expiration Date"
                             value={inputs.expiration || ""}
                             onChange={handleChange}
                         />
@@ -146,6 +154,7 @@ const BankForm = () => {
                             className="checkoutFormInput numberInput"
                             type="number"
                             name="code"
+                            placeholder="Security Code"
                             value={inputs.code || ""}
                             onChange={handleChange}
                         />
@@ -153,7 +162,7 @@ const BankForm = () => {
 
                     <input
                         className="checkoutButton"
-                        type="submit"
+                        type="button"
                         value="Checkout"
                     />
                 </form>

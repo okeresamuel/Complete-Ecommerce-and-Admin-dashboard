@@ -6,6 +6,7 @@ export const items = [{
         discount: false,
         oldPrice: 200,
         favorite: false,
+        desc: "see how this guy is shinning you should imitate him.",
         tag: "New"
     },
     {
@@ -67,6 +68,7 @@ export const items = [{
         discount: true,
         oldPrice: 420,
         favorite: false,
+        desc: "Give this to your wife or fiancee and expect a lovely dish in return",
         tag: "Hot Promo"
     },
     {
