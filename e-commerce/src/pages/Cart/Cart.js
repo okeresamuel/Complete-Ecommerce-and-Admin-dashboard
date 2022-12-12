@@ -1,5 +1,5 @@
 import { CartContext } from '../../context/CartContext';
-import { useContext, useEffect, useState} from "react";
+import { useContext,} from "react";
 import BankForm from '../../components/BankForm/BankForm';
 import "./cart.css"
 import { styled } from '@mui/material/styles';
