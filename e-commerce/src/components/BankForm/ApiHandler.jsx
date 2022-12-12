@@ -1,31 +1,41 @@
-import { useContext, useEffect } from "react"
-import { PassedValues } from "../../context/CartContext"
+import { useEffect, useState } from "react"
+import { items } from "../../data/items"
 
-export const ApiHandler = () => {
+apiKey = "4b908306c58449eda65cb9bd89a5468a"
 
-    const {inputs, setInputs} = useContext(PassedValues)
+export const getUrl = () => `https://crudcrud.com/api/${apiKey}/store/`
+
+export const apiHandler = ({ inputs, setInputs }) => {
+    const [inputs, setInputs] = useState();
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await fetch("http://localhost:3333/inputs") // Pulling existing data from server
-            const jsonResult = await result.json(); // Turning those results into a usable object
+            await fetch(`https://crudcrud.com/api/${apiKey}/inputs`).then((data) => {
+                data.json().then(items => {
+                    setInputs(items);
+                }).catch(err => console.log(err));
+            }).catch(err => console.log(err)) // Pulling existing data from server
 
-            setInputs(jsonResult) // setting current state to what is saved.
+            // const jsonResult = await result.json(); // Turning those results into a usable object
+
+            // setInputs(jsonResult) // setting current state to what is saved.
         }
 
         fetchData();
     }, []) // Function retreives the data stored in the cloud
+}
 
-    const submitInput = async () => {
-        const result = await fetch("http://localhost:3333/inputs", {
+export const seedDB = () => {
+    items.forEach(item => {
+        fetch(getUrl(), {
             method: "POST",
             headers: {
+                'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(inputs)
-        })
-
-        const resultInJson = await result.json()
-        setInputs(resultInJson)
-    }
+            body: JSON.stringify(item)
+        }).then(data => {
+            console.log("success", data)
+        }).catch(err => console.log("error", err));
+    })
 }
