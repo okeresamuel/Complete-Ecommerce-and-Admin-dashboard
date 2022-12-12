@@ -9,14 +9,20 @@ import {Link} from "react-router-dom"
 import './Header.css';
 import { useRef, useContext} from 'react';
 import { CartContext } from '../../context/CartContext';
+import {SearchContext} from "../../context/SearchContext"
 
 
 
-const Header = ({setSearchValue}) => {
+const Header = () => {
   
     //cart global state.
-    const globalState = useContext(CartContext)
+    const Cart  = useContext(CartContext)
+
+    // search global state.
+    const search = useContext(SearchContext)
+    const [_, setSearchValue] = search
    
+        
     // Hide and show cart for mobile phones
     const languageConatainer__ref = useRef()
     const languageConatainerExiticon__ref = useRef()
@@ -35,7 +41,7 @@ const Header = ({setSearchValue}) => {
     return (<div id='header' className='greyBorder'>
       <div className="search__box">
       <SearchIcon className='search__Icon' />
-      <input className='search__Input' type="search" placeholder='Search among 100+ products' onChange={(e) => {setSearchValue(e.target.value)}}></input>
+      <input className='search__Input' type="search" placeholder='Search among 100+ products' onChange={(e) =>{setSearchValue(e.target.value)}}></input>
       <GrainIcon className='Grain__Icon' />
       </div>
       
@@ -51,13 +57,13 @@ const Header = ({setSearchValue}) => {
         <LanguageIcon  className="Language__Icon" />         
         <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
         <Link to="/cart" className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></Link>
-        <div className="Cart_Counter">{globalState ?globalState.state.length : 0}</div>
+        <div className="Cart_Counter">{Cart? Cart.state.length : 0}</div>
         </div> 
       
       
          {/* check if use exist before redirecting to user profile  */}
          <div className="profile__iconDiv">
-         <Link to={user ? "/Aparel/Userprofile" : "/Aparel/Signup"}>
+         <Link to={user ? "/Aparel/Userprofile" : "/Aparel/Login"}>
          <img  className="profile__icon" src='https://cdn-icons-png.flaticon.com/128/5349/5349022.png' alt='profile__pic'/>
          <span className='user__name'>{user ? user.username.slice(0, 3) : ""}</span>
          </Link>
@@ -66,5 +72,4 @@ const Header = ({setSearchValue}) => {
       <button className='opennav__menu' onClick={ShowChart}>Show Cart</button>
     </div>)
 }
-
 export default Header;

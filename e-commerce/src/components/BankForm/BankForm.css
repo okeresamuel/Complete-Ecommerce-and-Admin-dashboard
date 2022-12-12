@@ -1,31 +1,48 @@
 #checkoutForm {
     display: flex;
-    width: 40vw;
     height: 80vh;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    border: solid 1px grey;
+    width: 90%;
+    border-radius: 20px;
 }
 
 form {
     overflow-y: scroll;
-    overflow-x: hidden;
+    padding:15px;
+    display: grid;
+    border:1px solid;
+    border-radius:5px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+}
+form::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius:10px;
+}
+
+#shippingAddress,#address2{
+    position: relative;
+    top:-5px;
+    margin-right:5px;
 }
 
 .checkoutFormInput {
     margin-top: 10px;
-    padding: 5px;
+    padding: 10px;
     padding-right: 7rem;
     max-width: 100%;
     box-sizing: border-box;
     border: solid 1px rgb(0, 0, 0);
+    border-radius:2px;
 }
 
 .checkoutFormInput:focus {
-    background-color: #baeeaa;
-    outline: none;
     border: 2px solid rgb(126, 126, 126);
+    outline-color:rgb(76, 0, 252) !important ;
   }
 
 label {
@@ -48,4 +65,11 @@ label {
 
 .displayNone {
     display: none
+}
+.checkoutButton{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border:none;
+    border-radius:5px;
 }
