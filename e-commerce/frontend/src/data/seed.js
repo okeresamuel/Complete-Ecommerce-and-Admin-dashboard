@@ -1,4 +1,4 @@
-import { items } from "../data/items"
+import { items } from "./items"
 
 const apiKey = '5e3adb52ebe0455e9d2e451266663a49';
 
