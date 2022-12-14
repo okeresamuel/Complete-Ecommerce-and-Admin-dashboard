@@ -1,26 +1,12 @@
-// import { items } from "../../data/items";
+import { items } from "../../data/items";
 import "./products.css";
 import { CartContext } from "../../context/CartContext";
 import { SearchContext } from "../../context/SearchContext"
-import { useContext, useEffect, useState} from "react";
+import { useContext} from "react";
 import { toast } from "react-toastify"
 import Product from "./product/product";
-import { seedDB, getUrl } from '../../data/seed';
-
-// Seed the database
-// seedDB()
 
 const Products = () => {
-
-  //fetches the data from crudcrud a temporary database
-  const [items, setItems] = useState();
-  useEffect(() => {
-    fetch(getUrl()).then((data) => {
-      data.json().then(items => {
-        setItems(items);
-      }).catch(err => console.log(err));
-    }).catch(err => console.log(err))
-  }, [])
 
   //setup dispatch for cart
   const cartState = useContext(CartContext);
