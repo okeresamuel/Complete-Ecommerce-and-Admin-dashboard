@@ -1,7 +1,14 @@
 #checkout {
     display: flex;
-    max-width: 80vw;
-    max-height: 80vh;
-    margin-top: 25px;
-    margin-left: 10px;
+    justify-content:space-between;
+    width: 84vw;
+    margin: auto;
+}
+
+.Money{
+    color:rgb(5, 175, 5);
+}
+
+.cart_section,.bankform_section{
+    width:39vw;
 }

@@ -77,7 +77,7 @@ const SideBar = () => {
      
      {/* open and close menu icon */}
      <MenuIcon  className="sideBarShow__Icon" onClick={toggleSideBar}/>
-     <a href='Home'><BackToTopIcon className="BackToTop__Icon" /></a>
+     <a href='/'><BackToTopIcon className="BackToTop__Icon" /></a>
      </>
 
     )
