@@ -1,0 +1,119 @@
+import { CartContext } from '../../context/CartContext';
+import { useContext} from "react";
+import BankForm from '../../components/BankForm/BankForm';
+import "./Cart.css"
+import { styled } from '@mui/material/styles';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
+import ButtonBase from '@mui/material/ButtonBase';
+import {useSelector} from "react-redux"
+import {Link} from "react-router-dom"
+
+const Img = styled('img')({
+    margin: 'auto',
+    display: 'block',
+    maxWidth: '100%',
+    maxHeight: '100%',
+});
+
+const Cart = () => {
+    const subtotal = (prices) => {  
+        let sum = 0
+        prices?.forEach(element => sum += element.price * element.qty);
+        return "$" + sum
+};
+
+const cartState = useContext(CartContext)
+const dispatch = cartState.dispatch
+const {user} = useSelector((state)=> state.auth)
+
+
+// increase the cart item by clicking the button in the cart.
+const increase_cartItem = (item) =>{
+ dispatch({type:"INCREASE_CART_ITEM", payload:item})
+}
+// decrease the cart item by clicking the button in the cart.
+const decrease_cartItem = (item) =>{
+  item.qty === 1 ? <></> : dispatch({type:"DECREASE_CART_ITEM", payload:item })
+  
+}
+
+    return (
+        <div id="checkout">
+            <section className='cart_section'>
+            <h4>Welcome To your cart {user?.username}</h4>
+
+             {cartState?.state.length <= 0 ? (
+                /* if the cart items exist then map through 
+                else we redirect the back to the home page to start shopping */
+                 <p>No Cart Items Found ? 🤔  <Link to='/'>Start Shoping here!!!</Link></p>
+              ) : (
+                <div>{cartState.state.map((item) => (
+                    <>
+                      <Paper
+                            sx={{
+                                p: 2,
+                                margin: 'auto',
+                                maxWidth: 500,
+                                flexGrow: 1,
+                                backgroundColor: (theme) =>
+                                theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+                            }}
+                            style={{maginTop: "5px"}}
+                        >
+                            <Grid container spacing={2}>
+                                <Grid item>
+                                    <ButtonBase sx={{ width: 128, height: 128 }}>
+                                        <Img alt="complex" src={item.image} />
+                                    </ButtonBase>
+                                </Grid>
+                                <Grid item xs={12} sm container>
+                                    <Grid item xs container direction="column" spacing={2}>
+                                        <Grid item xs>
+                                            <Typography gutterBottom variant="subtitle1" component="div">
+                                                {item.name}
+                                            </Typography>
+                                            <Typography variant="body2" gutterBottom>
+    
+                                            </Typography>
+                                            <Typography variant="body2" color="text.secondary">
+                                               <h4>{item.desc}</h4> 
+                                            </Typography>
+                                            <Typography variant="body2" color="text.secondary">
+                                                Product ID: {item.id}
+                                            </Typography>
+                                            <Typography>
+                                                Amount Selected  <button onClick={(()=> decrease_cartItem(item) )}>-</button> {item.qty} <button onClick={(()=> increase_cartItem(item))} >+</button>
+                                        </Typography>
+                                       </Grid>
+                                      <Grid item>
+                                     </Grid>
+                                    </Grid>
+                                    <Grid item>
+                                        <Typography variant="subtitle1" component="div">
+                                            {"$" + item.price * item.qty} 
+                                        </Typography>
+                                        <Typography component="div"onClick={(()=>{dispatch({type:"DELETE", payload:item})})}>
+                                           X
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </Grid>
+                        </Paper>
+                     </>
+                 ))}
+                </div>
+             )}
+
+            <h2> Payments Subtotal: <span className='Money'>{subtotal(cartState.state)}</span></h2>
+            <button onClick={(()=>{dispatch({type:"CLEAR_CART"})})} className="clear__cart">Clear Cart</button>
+            <button className='Stripe__btn'>Checkout via Stripe</button>
+           </section>
+           <section className='bankform_section'>
+           <BankForm /> 
+           </section>
+        </div>
+    )
+}
+export default Cart
