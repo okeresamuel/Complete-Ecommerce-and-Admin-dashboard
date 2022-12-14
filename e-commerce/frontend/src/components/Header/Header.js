@@ -20,7 +20,7 @@ const Header = () => {
 
     // search global state.
     const search = useContext(SearchContext)
-    const [_, setSearchValue] = search
+    const [searchValue, setSearchValue] = search
    
         
     // Hide and show cart for mobile phones

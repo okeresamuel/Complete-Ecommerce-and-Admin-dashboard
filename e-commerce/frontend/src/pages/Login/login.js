@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom"
 import {useState, useEffect} from "react"
 import {useDispatch, useSelector} from "react-redux"
-import {loginUser} from "../../features/Auth/authaction"
+import {loginUser} from "../../components/features/Auth/authaction"
 import Loader from "../components/Loader/loader"
 import ErrorSweetalert from "../components/sweetalert/sweetalert"
-import {resetAuthState} from "../../features/Auth/authslice"
+import {resetAuthState} from "../../components/features/Auth/authslice"
 import {toast} from "react-toastify"
 import {useNavigate} from "react-router-dom"
 

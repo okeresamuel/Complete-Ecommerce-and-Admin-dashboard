@@ -1,5 +1,5 @@
 export {default as Errorpage} from "./Errorpage/errorpage"
-export {default as  SignUp} from "../components/pages/SignUp/signup"
-export {default as  Login} from "../components/pages/Login/login"
+export {default as  SignUp} from "../pages/SignUp/signup"
+export {default as  Login} from "../pages/Login/login"
 export {default as  Userprofile} from "./Userprofile/userprofile"
 export {default as Cart} from "./Cart/Cart"
