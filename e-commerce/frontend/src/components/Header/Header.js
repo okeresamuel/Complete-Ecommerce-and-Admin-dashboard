@@ -4,26 +4,32 @@ import LanguageIcon from '@mui/icons-material/Language';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ExitIcon from '@mui/icons-material/HighlightOff';
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
 import {Link} from "react-router-dom"
 import './Header.css';
-import { useRef, useContext} from 'react';
-import { CartContext } from '../../context/CartContext';
-import {SearchContext} from "../../context/SearchContext"
-
+import { useRef} from 'react';
+import {useNavigate} from "react-router-dom"
+import {useEffect } from 'react';
+import {search} from "../../features/searchInput/searchInputSlice"
 
 
 const Header = () => {
-  
-    //cart global state.
-    const Cart  = useContext(CartContext)
+ 
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const {cart} = useSelector((state)=> state.cart)
+  const {user} = useSelector((state)=> state.auth)
 
-    // search global state.
-    const search = useContext(SearchContext)
-    const [searchValue, setSearchValue] = search
-   
+  useEffect(()=>{
+   if(!user){
+    // navigate("/Aparel/Login")
+   }
+},[user, navigate])
+
+  
+  
         
-    // Hide and show cart for mobile phones
+    // Hide and show cart for mobile view
     const languageConatainer__ref = useRef()
     const languageConatainerExiticon__ref = useRef()
     const  ShowChart = () => {
@@ -35,13 +41,11 @@ const Header = () => {
       languageConatainerExiticon__ref.current.style.visibility = "hidden"
     }
      
-    
-    const {user} = useSelector((state)=> state.auth)
 
     return (<div id='header' className='greyBorder'>
       <div className="search__box">
       <SearchIcon className='search__Icon' />
-      <input className='search__Input' type="search" placeholder='Search among 100+ products' onChange={(e) =>{setSearchValue(e.target.value)}}></input>
+      <input className='search__Input' type="search" placeholder='Search among 100+ products' onChange={(e) =>{dispatch(search(e.target.value))}}></input>
       <GrainIcon className='Grain__Icon' />
       </div>
       
@@ -56,8 +60,8 @@ const Header = () => {
         </select> 
         <LanguageIcon  className="Language__Icon" />         
         <a href="#closed" className="Nav__btn1">Wishlist <FavoriteBorderIcon className='love__icon'/></a>
-        <Link to={"/cart"} className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></Link>
-        <div className="Cart_Counter">{Cart? Cart.state.length : 0}</div>
+        <Link to={user ? "/cart" : "/Aparel/Login"} className="Nav__btn2">Your Cart <ShoppingCartIcon className='Shopping__icon'/></Link>
+        <div className="Cart_Counter">{cart? cart.length : 0}</div>
         </div> 
       
       

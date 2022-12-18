@@ -1,7 +1,6 @@
 import "./BankForm.css"
 import { useState } from "react";
 import BankFormCheckBox from "./BankFormCheckBox";
-import { PassedValues } from "../../context/CartContext";
 
 const BankForm = () => {
     const [inputs, setInputs] = useState({}); // creates a dynamic object for me to add form entries too.
@@ -43,7 +42,6 @@ const BankForm = () => {
     } 
 
     return (
-        <PassedValues.Provider value={{ inputs, setInputs }}>
             <div id="checkoutForm">
                 <form onSubmit={handleSubmit}>
 
@@ -174,7 +172,6 @@ const BankForm = () => {
                         onClick={handleDelete}
                     />
             </div>
-        </PassedValues.Provider>
     )
 }
 

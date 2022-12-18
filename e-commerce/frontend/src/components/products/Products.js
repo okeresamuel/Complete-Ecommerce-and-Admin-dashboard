@@ -1,40 +1,36 @@
-import { items } from "../../data/items";
 import "./products.css";
-import { CartContext } from "../../context/CartContext";
-import { SearchContext } from "../../context/SearchContext"
-import { useContext} from "react";
+import {useEffect} from "react";
 import { toast } from "react-toastify"
 import Product from "./product/product";
+import {get_product} from "../../features/Allproducts/productaction"
+import {useDispatch, useSelector} from "react-redux";
+import {addToCart} from "../../features/cart/cartslice"
+import Loader from "../../pages/components/Loader/loader"
 
 const Products = () => {
-
-  //setup dispatch for cart
-  const cartState = useContext(CartContext);
-  const dispatch = cartState.dispatch;
+  const {products, loading} = useSelector((state)=>  state.product)
+  const {searchvalue} = useSelector((state)=>  state.search)
   
-  //typed in value from the search box
-  const search = useContext(SearchContext)
-  const [searchValue] = search
-
-  //push item to cart 
-  function addtocart(item){
-  const foundItem = cartState.state.findIndex((items) => items.id === item.id)
-  if(foundItem >= 0){
-    cartState.state[foundItem].qty += 1
-    toast.info(`${item.name} Quantity has been increased to ${cartState.state[foundItem].qty}`)
-  }else{
-    dispatch({ type: "ADD", payload:item})
-    toast.success(`${item.name} added to cart`)   
-  }
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(get_product())
+  }, [dispatch])
+   
+ 
+//push item to cart 
+function addtocart(item){
+   dispatch(addToCart(item))
 }
+
 
 return (
     <div className="Products__display">
-      {items?.filter((item) => {
-         if (!searchValue){ return item; } 
-         return item.name.toLowerCase().includes(searchValue.toLowerCase()) ? item : ""
-        })
-        .map((item) => <Product item={item} addtocart={addtocart}/>)}
+      {products?.filter((product) => {
+         if (!searchvalue){ return product; } 
+         return product.name.toLowerCase().includes(searchvalue.toLowerCase()) ? product : ""
+        }).map((product) => <Product item={product} addtocart={addtocart}/>)}
+        
+       {loading ? <Loader />  : ""}
     </div>
   );
 };

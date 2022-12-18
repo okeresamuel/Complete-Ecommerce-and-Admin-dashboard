@@ -1,6 +1,6 @@
 import './Main.css'
 import ItemLable from '../../../src/components/Item-Lable/itemLable';
-import Products from "../products/products"
+import Products from "../products/Products"
 import Breadcrumb from '../Breadcrumb/Breadcrumb';
 import PageButton from '../../../src/components/PageButtons/PageButton';
 

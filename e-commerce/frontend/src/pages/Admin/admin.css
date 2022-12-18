@@ -1,0 +1,26 @@
+.Add__productContainer{
+    width:82vw;
+    display: flex;
+    justify-content:right;
+    position: relative;
+    padding: 10px;
+}
+
+.input__container{
+    width:90%;
+    position: absolute;
+    top:10%;
+    margin-left:10px;
+}
+
+.inputs__Admin{
+    display: grid;
+    width: 53%;
+    margin: 10px;
+      padding:11px;
+    margin-top: 8px;
+    margin-bottom:8px;
+    border:1px solid rgba(0, 0, 255, 0.301);
+    outline-color:blue !important;
+    border-radius:5px;
+}

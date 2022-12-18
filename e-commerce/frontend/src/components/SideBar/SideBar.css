@@ -14,7 +14,7 @@
 }
 
 
-.sideBarShow__Icon,.BackToTop__Icon{
+.sideBarShow__Icon,.BackToTop__Icon,.Admin__Icon{
     background-color:white; 
     color: blue;
     padding:6px;
@@ -29,6 +29,9 @@
 }
 .BackToTop__Icon{
     bottom: 120px;
+}
+.Admin__Icon{
+    bottom: 200px; 
 }
 @media (max-width:1170px){
 .sideBar{

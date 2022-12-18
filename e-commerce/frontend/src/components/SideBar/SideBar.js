@@ -1,11 +1,14 @@
 import './SideBar.css'
+import { useSelector } from "react-redux"
 import ArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PaletteIcon from '@mui/icons-material/Palette';
 import Checkbox from '../../../src/components/Checkbox/Checkbox';
 import DeleteIcon from '@mui/icons-material/DeleteOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import BackToTopIcon from '@mui/icons-material/VerticalAlignTop';
-import {useRef} from "react"
+import AdminIcon from '@mui/icons-material/AdminPanelSettings';
+import {useRef,} from "react"
+import {Link} from "react-router-dom"
 
 const SideBar = () => {
     const sideBar__Ref = useRef()
@@ -13,11 +16,13 @@ const SideBar = () => {
      sideBar__Ref.current.classList.toggle("hide__sidebar")
     }
 
+    const {user} = useSelector((state)=> state.auth)
+
      return (
      <>
      <div className='sideBar greyBorder' ref={sideBar__Ref}>
     
-    {/* category */}
+      {/* category */}
       <>
       <h4 className='Header__text'>Category</h4>
       <div className='category__container'>
@@ -30,7 +35,7 @@ const SideBar = () => {
       </div>
       </>
 
-    {/* filter by type */}
+       {/* filter by type */}
        <>
        <h4 className='Header__text'>Filter by:</h4>
        <h4 className='Tipe__text'>Tipe   <ArrowUpIcon /></h4>
@@ -75,11 +80,11 @@ const SideBar = () => {
    
     </div>
      
-     {/* open and close menu icon */}
+     {/* open and close menu icon and refresh icon */}
      <MenuIcon  className="sideBarShow__Icon" onClick={toggleSideBar}/>
-     <a href='/'><BackToTopIcon className="BackToTop__Icon" /></a>
+     <Link to='/'><BackToTopIcon className="BackToTop__Icon" /></Link>
+     {user?.Admin ? <Link to='/Aparel/Admin'><AdminIcon  className="Admin__Icon"/></Link> : ""}
      </>
-
     )
 }
 

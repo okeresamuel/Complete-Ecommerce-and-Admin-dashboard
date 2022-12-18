@@ -45,7 +45,7 @@ body{
     display: grid;
     width: 53%;
 }
-.username,.password,.Login__btn{
+.username,.password,.Login__btn,.inputs__Admin{
     padding:11px;
     margin-top: 8px;
     margin-bottom:8px;

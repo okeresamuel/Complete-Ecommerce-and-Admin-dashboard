@@ -1,7 +1,7 @@
-import {logoutUser} from "../../components/features/Auth/authaction"
+import {logoutUser} from "../../features/Auth/authaction"
 import {useDispatch, useSelector} from "react-redux"
 import {useNavigate} from "react-router-dom"
-import {resetAuthState } from "../../components/features/Auth/authslice"
+import {resetAuthState } from "../../features/Auth/authslice"
 import "./userprofile.css"
 
 

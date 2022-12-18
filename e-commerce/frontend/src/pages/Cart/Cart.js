@@ -1,5 +1,3 @@
-import { CartContext } from '../../context/CartContext';
-import { useContext} from "react";
 import BankForm from '../../components/BankForm/BankForm';
 import "./Cart.css"
 import { styled } from '@mui/material/styles';
@@ -7,8 +5,9 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
 import {Link} from "react-router-dom"
+import {removeFromcart, IncrementItem, DecrementItem, ClearCart} from "../../features/cart/cartslice"
 
 const Img = styled('img')({
     margin: 'auto',
@@ -18,38 +17,28 @@ const Img = styled('img')({
 });
 
 const Cart = () => {
-    const subtotal = (prices) => {  
+const subtotal = (prices) => {  
         let sum = 0
         prices?.forEach(element => sum += element.price * element.qty);
         return "$" + sum
 };
 
-const cartState = useContext(CartContext)
-const dispatch = cartState.dispatch
+
 const {user} = useSelector((state)=> state.auth)
-
-
-// increase the cart item by clicking the button in the cart.
-const increase_cartItem = (item) =>{
- dispatch({type:"INCREASE_CART_ITEM", payload:item})
-}
-// decrease the cart item by clicking the button in the cart.
-const decrease_cartItem = (item) =>{
-  item.qty === 1 ? <></> : dispatch({type:"DECREASE_CART_ITEM", payload:item })
-  
-}
+const {cart} = useSelector((state)=> state.cart)
+const dispatch = useDispatch()
 
     return (
         <div id="checkout">
             <section className='cart_section'>
             <h4>Welcome To your cart {user?.username}</h4>
 
-             {cartState?.state.length <= 0 ? (
+             {cart?.length <= 0 ? (
                 /* if the cart items exist then map through 
                 else we redirect the back to the home page to start shopping */
                  <p>No Cart Items Found ? 🤔  <Link to='/'>Start Shoping here!!!</Link></p>
               ) : (
-                <div>{cartState.state.map((item) => (
+                <div>{cart?.map((item) => (
                     <>
                       <Paper
                             sx={{
@@ -81,10 +70,10 @@ const decrease_cartItem = (item) =>{
                                                <h4>{item.desc}</h4> 
                                             </Typography>
                                             <Typography variant="body2" color="text.secondary">
-                                                Product ID: {item.id}
+                                                Product ID: {item._id}
                                             </Typography>
                                             <Typography>
-                                                Amount Selected  <button onClick={(()=> decrease_cartItem(item) )}>-</button> {item.qty} <button onClick={(()=> increase_cartItem(item))} >+</button>
+                                                Amount Selected  <button onClick={(()=>{dispatch(DecrementItem(item))})}>-</button> {item.qty} <button onClick={(()=>{dispatch(IncrementItem(item))})}>+</button>
                                         </Typography>
                                        </Grid>
                                       <Grid item>
@@ -94,7 +83,7 @@ const decrease_cartItem = (item) =>{
                                         <Typography variant="subtitle1" component="div">
                                             {"$" + item.price * item.qty} 
                                         </Typography>
-                                        <Typography component="div"onClick={(()=>{dispatch({type:"DELETE", payload:item})})}>
+                                        <Typography component="div" onClick={(()=>{dispatch(removeFromcart(item))})}>
                                            X
                                         </Typography>
                                     </Grid>
@@ -106,8 +95,8 @@ const decrease_cartItem = (item) =>{
                 </div>
              )}
 
-            <h2> Payments Subtotal: <span className='Money'>{subtotal(cartState.state)}</span></h2>
-            <button onClick={(()=>{dispatch({type:"CLEAR_CART"})})} className="clear__cart">Clear Cart</button>
+            <h2> Payments Subtotal: <span className='Money'>{subtotal(cart)}</span></h2>
+            <button className="clear__cart" onClick={()=>{dispatch(ClearCart())}}>Clear Cart</button>
             <button className='Stripe__btn'>Checkout via Stripe</button>
            </section>
            <section className='bankform_section'>

@@ -1,5 +1,5 @@
 import  {createAsyncThunk} from "@reduxjs/toolkit" 
-import axios from "axios"
+import axios  from "../../helpers/api"
 
 // we Registered user by retriving info from our form and send that to to backend
 export const registerUser = createAsyncThunk("authSlice", async (userInfo, {rejectWithValue})=>{

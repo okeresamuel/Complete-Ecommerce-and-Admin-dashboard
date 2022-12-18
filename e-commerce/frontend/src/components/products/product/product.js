@@ -8,7 +8,7 @@ import { Button } from "@mui/material";
 function Product({item, addtocart}) {
     
   return (
-        <div className="shirt__container" key={item.id}>
+        <div className="shirt__container" key={item._id}>
         <div className="Favorite_Icon">
            <FavoriteBorderIcon />
         </div>
