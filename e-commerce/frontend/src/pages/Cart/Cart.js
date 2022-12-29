@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import ButtonBase from '@mui/material/ButtonBase';
 import {useSelector, useDispatch} from "react-redux"
 import {Link} from "react-router-dom"
+import Checkoutbtn from "./stripecheckout/checkout"
 import {removeFromcart, IncrementItem, DecrementItem, ClearCart} from "../../features/cart/cartslice"
 
 const Img = styled('img')({
@@ -73,7 +74,7 @@ const dispatch = useDispatch()
                                                 Product ID: {item._id}
                                             </Typography>
                                             <Typography>
-                                                Amount Selected  <button onClick={(()=>{dispatch(DecrementItem(item))})}>-</button> {item.qty} <button onClick={(()=>{dispatch(IncrementItem(item))})}>+</button>
+                                                Amount Selected  <button onClick={(()=>{ item.qty === 1 ? <></> : dispatch(DecrementItem(item))})}>-</button> {item.qty} <button onClick={(()=>{dispatch(IncrementItem(item))})}>+</button>
                                         </Typography>
                                        </Grid>
                                       <Grid item>
@@ -94,10 +95,9 @@ const dispatch = useDispatch()
                  ))}
                 </div>
              )}
-
             <h2> Payments Subtotal: <span className='Money'>{subtotal(cart)}</span></h2>
             <button className="clear__cart" onClick={()=>{dispatch(ClearCart())}}>Clear Cart</button>
-            <button className='Stripe__btn'>Checkout via Stripe</button>
+           <Checkoutbtn  cartItems={cart} />
            </section>
            <section className='bankform_section'>
            <BankForm /> 
@@ -105,4 +105,4 @@ const dispatch = useDispatch()
         </div>
     )
 }
-export default Cart
+export default Cart 

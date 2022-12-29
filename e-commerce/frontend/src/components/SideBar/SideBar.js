@@ -1,5 +1,5 @@
 import './SideBar.css'
-import { useSelector } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import ArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import PaletteIcon from '@mui/icons-material/Palette';
 import Checkbox from '../../../src/components/Checkbox/Checkbox';
@@ -7,31 +7,47 @@ import DeleteIcon from '@mui/icons-material/DeleteOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import BackToTopIcon from '@mui/icons-material/VerticalAlignTop';
 import AdminIcon from '@mui/icons-material/AdminPanelSettings';
-import {useRef,} from "react"
-import {Link} from "react-router-dom"
+import {sortedproducts} from "../../features/Allproducts/productslice"
+import {useEffect, useRef} from "react"
+import {Link, useNavigate, NavLink} from "react-router-dom"
 
 const SideBar = () => {
+
     const sideBar__Ref = useRef()
     const toggleSideBar = () => {
      sideBar__Ref.current.classList.toggle("hide__sidebar")
     }
 
+
     const {user} = useSelector((state)=> state.auth)
+    const {products}  = useSelector((state)=> state.product)
+    const dispatch = useDispatch();
+  
+    const HandleSort__category = (category) =>{
+    let sortedItem  = products?.filter((item)=> { 
+     return item.category === category
+    })
+      dispatch(sortedproducts(sortedItem))
+    }
+
+    const navigate = useNavigate()
+    useEffect(()=>{
+    !user?.Admin ? navigate("/") : <></>
+    },[])
 
      return (
      <>
-     <div className='sideBar greyBorder' ref={sideBar__Ref}>
-    
+     <div className='sideBar greyBorder' ref={sideBar__Ref}>    
       {/* category */}
       <>
       <h4 className='Header__text'>Category</h4>
       <div className='category__container'>
-      <a href="#Closed"  className="link">T-Shirt</a>
-      <a href="#Closed"  className="link">Sweatshirt</a>
-      <a href="#Closed"  className="link">Dress</a>
-      <a href="#Closed"  className="link">Pants and Skirt</a>
-      <a href="#Closed"  className="link">Swinsuit</a>
-      <a href="#Closed"  className="link">Stuff and Accessories</a>
+      <NavLink className="link" onClick={(()=>{HandleSort__category("T-Shirt")})}>T-Shirt</NavLink>
+      <NavLink className="link" onClick={(()=>{HandleSort__category("Sweatshirt")})}>Sweatshirt</NavLink>
+      <NavLink className="link" onClick={(()=>{HandleSort__category("Dress")})}>Dress</NavLink>
+      <NavLink className="link" onClick={(()=>{HandleSort__category("Pants and Skirt")})}>Pants and Skirt</NavLink>
+      <NavLink className="link" onClick={(()=>{HandleSort__category("Swimsuit")})}>Swimsuit</NavLink>
+      <NavLink className="link" onClick={(()=>{HandleSort__category("Stuff and Accessories")})}>Stuff and Accessories</NavLink>
       </div>
       </>
 
@@ -47,7 +63,7 @@ const SideBar = () => {
        </div>
        </>
       
-    {/* filter by color */}
+      {/* filter by color */}
        <>
        <h4 className='Tipe__text'>Color <ArrowUpIcon /></h4>
        <div className='FilterbyColor__container' >
@@ -77,13 +93,12 @@ const SideBar = () => {
       <DeleteIcon />  
       </div>
       </div> 
-   
-    </div>
+      </div>
      
      {/* open and close menu icon and refresh icon */}
      <MenuIcon  className="sideBarShow__Icon" onClick={toggleSideBar}/>
      <Link to='/'><BackToTopIcon className="BackToTop__Icon" /></Link>
-     {user?.Admin ? <Link to='/Aparel/Admin'><AdminIcon  className="Admin__Icon"/></Link> : ""}
+     {user?.Admin ? <Link to='/Aparel/Admin/Createproduct'><AdminIcon  className="Admin__Icon"/></Link> : ""}
      </>
     )
 }

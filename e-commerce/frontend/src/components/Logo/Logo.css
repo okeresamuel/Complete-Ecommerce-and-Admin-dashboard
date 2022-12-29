@@ -18,3 +18,9 @@
 .svg-text{
     margin: 0;
 }
+
+@media(max-width:670px){
+    .svg-text{
+       display:none;
+    } 
+}

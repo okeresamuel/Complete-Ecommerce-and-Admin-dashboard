@@ -1,0 +1,13 @@
+.link_isActive{
+    color:blue;
+}
+.Admin__Navlinks{
+    display: flex;
+    justify-content: space-evenly; 
+    background-color: black;
+}
+
+.Admin__navlink{
+    padding: 10px;
+}
+

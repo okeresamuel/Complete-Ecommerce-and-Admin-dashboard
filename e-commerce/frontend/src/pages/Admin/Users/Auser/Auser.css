@@ -1,0 +1,28 @@
+.user__container{
+    display:flex;
+}
+.userouter_container{
+    padding:10px;
+}
+.userInfo__text{
+    margin-right: 29px;
+}
+
+.Admin__text{
+    background-color:red;
+    color: white;
+    padding:3px 6px 3px 5px;
+    border-radius:5px;
+    position: relative;
+}
+.Auser_text{
+    background-color:blue;
+    padding:3px 6px 3px 5px;
+    border-radius:5px;
+    color: white;   
+}
+.admin__Icon{
+    position: absolute;
+    left: 64px;
+    color: purple;
+}

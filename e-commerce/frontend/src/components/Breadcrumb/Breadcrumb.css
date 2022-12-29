@@ -5,10 +5,6 @@
     margin-top: 15px;
     margin-left: 15px;
 }
-
-#breadCrumbHomeIcon {
-    /* Just in case    */
-}
 a{
     text-decoration: none;
 }
@@ -24,4 +20,11 @@ li {
     padding-left: 10px;
     cursor: pointer;
     color: #e0dde0;
+}
+
+@media(max-width:614px){
+    #breadCrumbHomeIcon {
+        position: relative;
+        left: -5px;
+    }
 }

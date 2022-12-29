@@ -3,9 +3,9 @@ require("dotenv").config()
 
 
 const protect = (req, res, next) =>{
-    const token = req.header("x-auth-token")
+    const token = req.header("token")
     if(!token){
-        res.status("401").json("unauthorized no token found...")
+        res.status(401).json("unauthorized no token found...")
     }
     try {
         const decoded = jwt.verify(token, process.env.SECREAT)
@@ -16,6 +16,16 @@ const protect = (req, res, next) =>{
     }
 }
 
+
+const isAdmin = (req, res, next) =>{
+ if(req.user.isAdmin){
+    next()
+ }else{
+    res.send("You do not have proper admin privilages to make that request Pls contact an admin")
+ }
+}
+
 module.exports = {
-    protect
+    protect,
+    isAdmin,
 }

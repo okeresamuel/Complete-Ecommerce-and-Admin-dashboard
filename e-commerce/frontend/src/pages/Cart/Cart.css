@@ -12,13 +12,37 @@
 .cart_section,.bankform_section{
     width:39vw;
 }
-
+.cart_section{
+    height:85vh;
+    overflow: auto;
+}
+.cart_section::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+}
+.cart_section::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius:10px;
+}
 .clear__cart,.Stripe__btn{
     background-color: blue;
     color: white;
-    margin-right:20px;
-    padding:10px;
+    padding: 10px;
     border: none;
-    border-radius:4px;
+    border-radius: 4px;
     cursor: pointer;
+    margin: 0px 10px 10px 0px;
+}
+
+
+@media (max-width:1053px){
+    .bankform_section{
+        display: none;
+    }
+    .cart_section{
+        width:100%;
+    }
+    #checkout {
+        justify-content:center;
+    }
 }

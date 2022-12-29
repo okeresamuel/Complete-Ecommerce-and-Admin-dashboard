@@ -69,7 +69,7 @@ const Header = () => {
          <div className="profile__iconDiv">
          <Link to={user ? "/Aparel/Userprofile" : "/Aparel/Login"}>
          <img  className="profile__icon" src='https://cdn-icons-png.flaticon.com/128/5349/5349022.png' alt='profile__pic'/>
-         <span className='user__name'>{user && user.username.slice(0, 3)}</span>
+         <span className='user__name'>{user && user.username?.slice(0, 3)}</span>
          </Link>
         </div>
        </div> 

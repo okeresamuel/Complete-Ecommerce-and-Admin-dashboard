@@ -32,7 +32,7 @@ function Login() {
       if(!username || !password){
        ErrorSweetalert()
       }else{
-        dispatch(loginUser(inputvalue))
+        dispatch(loginUser({...inputvalue, password:inputvalue.password.trim()}))
       }
     }    
     
@@ -53,10 +53,10 @@ function Login() {
     <div className="login__container">
     <div className="inputs">
     <h3 className="Apparel__loginText">Aparel Login</h3>
-    <label>Email</label>
-    <input className="username" name="username" value={username} onChange={((e)=>{callonchange(e)})} placeholder="Email ID"></input>
+    <label>Username</label>
+    <input className="username" name="username" value={username} onChange={((e)=>{callonchange(e)})} placeholder="Username"></input>
     <label>Password</label>
-    <input className="password" name="password" value={password} onChange={((e)=>{callonchange(e)})} placeholder="Password"></input>
+    <input type="password" className="password" name="password" value={password} onChange={((e)=>{callonchange(e)})} placeholder="Password"></input>
     <button className="Login__btn" onClick={(()=>{login()})}>Login</button>
     <p>If You don`t have an account you can <Link to={"/Aparel/Signup"}>SignUp Here</Link></p>
     </div>

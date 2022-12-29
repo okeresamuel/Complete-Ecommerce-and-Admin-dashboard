@@ -38,7 +38,7 @@ function Signup() {
             confirmButtonText: 'Try Again'
           })
         }else{
-          dispatch(registerUser(inputvalue))
+          dispatch(registerUser({...inputvalue, password:inputvalue.password.trim()}))
 
         }
       }    
@@ -67,7 +67,7 @@ function Signup() {
     <label>Email</label>
     <input className="password" name="email" value={email} onChange={((e)=>{callonchange(e)})} placeholder="Email"></input>
     <label>Password</label>
-    <input className="password" name="password" value={password} onChange={((e)=>{callonchange(e)})} placeholder="Password"></input>
+    <input type="password" className="password" name="password" value={password} onChange={((e)=>{callonchange(e)})} placeholder="Password"></input>
     <button className="Login__btn" onClick={(()=>{register()})}>SignUp</button>
     <p>If You have an account you can <Link to={"/Aparel/Login"}>Login Here</Link></p>
     </div>

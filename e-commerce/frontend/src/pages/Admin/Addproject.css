@@ -9,18 +9,21 @@
 .input__container{
     width:90%;
     position: absolute;
-    top:10%;
+    top:30%;
     margin-left:10px;
 }
 
-.inputs__Admin{
+.inputs__fieldAdmin{
     display: grid;
     width: 53%;
     margin: 10px;
-      padding:11px;
-    margin-top: 8px;
-    margin-bottom:8px;
+}
+
+.createproduct__AdminBtn,.select__category,.select__color,.select__tipe{
+    padding:11px;
     border:1px solid rgba(0, 0, 255, 0.301);
     outline-color:blue !important;
     border-radius:5px;
+    margin: 10px;
+    cursor: pointer;
 }

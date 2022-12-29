@@ -1,0 +1,27 @@
+.product__img__viewpage{
+    width:200px;
+    height: 200px;
+    object-fit: fill;
+}
+
+.product__container__viewpage{
+    display: flex;
+    justify-content: space-between;
+    width: 425px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid;
+    border-radius: 6px;
+    padding: 0px 10px 0px 0px;
+}
+
+.Back__products__text{
+    background-color: blue;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 4px;
+}
+

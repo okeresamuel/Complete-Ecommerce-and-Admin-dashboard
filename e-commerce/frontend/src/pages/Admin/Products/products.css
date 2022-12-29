@@ -1,0 +1,113 @@
+.productImage__Admin{
+    width:50px;
+    height:50px;
+}
+.productInner_container{
+display: flex;
+justify-content: space-between;
+margin-top:4px;
+}
+
+.productOuter_container{
+    padding: 10px;
+    width: 69vw;
+   overflow: auto;
+   height: 72vh;
+  
+}
+
+.productOuter_container::-webkit-scrollbar{
+    width: 10px;
+    background-color: white;
+}
+.productOuter_container::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius:10px;
+}
+.product_nameAdmin,.product_priceAdmin{
+    width:100%;
+    text-align: center;
+}
+.product_tagAdmin{
+    width:100%;
+   text-align:left;
+}
+.tag{
+    background-color: rgb(244, 243, 252);
+    opacity: 0.85;
+    color: blue;
+    padding:6px 8px 6px 8px;
+    border-radius:5px;
+}
+
+.delete_btn,.view_btn,.update_btn{
+    height:25px;
+    position: relative;
+    top:10px;
+    background-color: red;
+    color:white;
+    border:none;
+    padding:0px 10px 0px 10px;
+    border-radius:4px;
+    cursor: pointer;
+    margin: 10px;
+}
+.view_btn{
+    background-color: rgb(35, 168, 58);
+}
+.update_btn{
+    background-color: rgb(231, 192, 15); 
+}
+
+.update_formContainer{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    width: 50%;
+    background-color: rgb(43, 46, 226);
+    color: white;
+    box-shadow: 1px 2px 24px -7px rgb(0 0 0 / 86%);
+    -webkit-box-shadow: 1px 2px 24px -7px rgb(0 0 0 / 81%);
+    -moz-box-shadow: 1px 2px 24px -7px rgba(0,0,0,1);
+    width: 55vw;
+    padding: 12px;
+    height: 46vh;
+    border-radius: 5px;
+}
+
+.hideUpdate_container{
+    display: none;
+}
+
+.update_input{
+    display: grid;
+    width: 100%;
+    margin: 10px;
+    width:96%;
+    margin: auto;
+    width: -webkit-fill-available;
+}
+.update_Productbtn{
+ width: -webkit-fill-available;
+ padding: 6px;
+ margin-right: auto;
+}
+
+.Admin_pagetitle_product{
+    position: sticky;
+    top: -10px;
+    height: 52px;
+    border-bottom: 1px solid gainsboro;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+}
+
+.updating_textContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  

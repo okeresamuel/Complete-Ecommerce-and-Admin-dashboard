@@ -1,15 +1,18 @@
+import { useContext } from "react";
 import { useState } from "react";
+import { PassedValues } from "../BankForm/BankForm";
 
 const BankFormCheckBox = (props) => {
     const { inputName, label } = props
     const [checked, setChecked] = useState(false);
-    const { inputs, setInputs } = useState(""); // creates a dynamic object for me to add form entries too.
+    const { inputs, setInputs } = useContext(PassedValues); // creates a dynamic object for me to add form entries too.
 
     const handleChange = (event) => {
         const name = event.target.name; // key
         const value = event.target.value; // value
         setInputs(values => ({ ...values, [name]: value })) // add key value pair to inputs object
     }
+
     const handleCheckboxChange = () => {
         setChecked(!checked);
     };

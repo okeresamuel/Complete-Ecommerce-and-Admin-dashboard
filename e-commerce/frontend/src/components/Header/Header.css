@@ -132,6 +132,7 @@
   }
   .showLanguage__container {
     visibility: visible;
+    z-index: 3;
   }
  
   .Nav__btn1,
@@ -175,4 +176,13 @@
    top:129px;
    right: 20px;
   }
+}
+
+@media (max-width:655px){
+.search__box {
+display: none;
+}
+#header{
+  justify-content: end;
+}
 }

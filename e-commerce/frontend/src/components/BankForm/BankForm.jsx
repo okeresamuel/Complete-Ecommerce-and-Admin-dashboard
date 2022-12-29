@@ -1,10 +1,11 @@
 import "./BankForm.css"
+import { createContext } from "react";
 import { useState } from "react";
 import BankFormCheckBox from "./BankFormCheckBox";
+export const PassedValues = createContext({})
 
 const BankForm = () => {
     const [inputs, setInputs] = useState({}); // creates a dynamic object for me to add form entries too.
-
     const handleChange = (event) => {
         const name = event.target.name; // key
         const value = event.target.value; // value
@@ -13,7 +14,6 @@ const BankForm = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault(); // Keeps page from refreshing and any other default behavior normally caused by the event.
-
         const result = await fetch("http://localhost:3333/inputs/1", {
             method: "PUT",
             headers: {
@@ -42,6 +42,7 @@ const BankForm = () => {
     } 
 
     return (
+        <PassedValues.Provider value={{ inputs, setInputs }}>
             <div id="checkoutForm">
                 <form onSubmit={handleSubmit}>
 
@@ -172,6 +173,7 @@ const BankForm = () => {
                         onClick={handleDelete}
                     />
             </div>
+        </PassedValues.Provider>
     )
 }
 

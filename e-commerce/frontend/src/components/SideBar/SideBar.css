@@ -5,14 +5,13 @@
     padding-bottom: 50px;
 }
 .sideBar::-webkit-scrollbar{
-    width:10px;
+    width:8px;
     height: 10px;
 }
 .sideBar::-webkit-scrollbar-thumb{
     background-color:blue;
     border-radius:4px;
 }
-
 
 .sideBarShow__Icon,.BackToTop__Icon,.Admin__Icon{
     background-color:white; 

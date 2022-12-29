@@ -31,7 +31,7 @@ body{
   left:50%;
   transform: translate(-50%, -50%);
   width:60vw;
-  height:60vh;
+  height:66vh;
   border-radius:5px;
   display: flex;
   justify-content: center;
@@ -41,17 +41,19 @@ body{
 -webkit-box-shadow: 1px 2px 24px -7px rgba(0, 0, 0, 0.808);
 -moz-box-shadow: 1px 2px 24px -7px rgba(0,0,0,1);
 }
+
 .inputs{
-    display: grid;
-    width: 53%;
+  display: grid;
+  width: 63%;;
 }
-.username,.password,.Login__btn,.inputs__Admin{
-    padding:11px;
-    margin-top: 8px;
-    margin-bottom:8px;
-    border:1px solid rgba(0, 0, 255, 0.301);
-    outline-color:blue !important;
-    border-radius:5px;
+.username,.password,.Login__btn,.inputs__fieldAdmin,.update_input{    
+  padding: 11px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border: 1px solid rgba(0, 0, 255, 0.301);
+  outline-color: #e91e6361 !important;
+  border-radius: 5px;
+
 }
 
 .Apparel__loginText{
@@ -63,4 +65,11 @@ body{
     color:white;
     cursor:pointer;
     border:none;
+}
+
+@media(max-width:600px){
+  .login__container{
+    width:93vw;
+    height:60vh;
+  }
 }

@@ -15,6 +15,7 @@ const cartSlice = createSlice({
     if(index >= 0 ) {
      state.cart[index].qty += 1
      toast.info(`${action.payload.name} quantity increased to ${state.cart[index].qty}`)
+     console.log(state.cart.price)
      localStorage.setItem("cart", JSON.stringify(state.cart))
     }else{
        toast.success(`${action.payload.name} added to cart`)
