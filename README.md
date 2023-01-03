@@ -1,5 +1,5 @@
 # Complete-Ecommerce-and-Admin-dashboard
-This project is an e-commerce project. with admin dashboard. written in javascript (React Node.js css Redux-toolkit)
+This project is a complete bootcamp e-commerce project. with admin dashboard. written in javascript (React Node.js css Redux-toolkit)
 The project has feature like: 
 
 1) filter with search bar  
@@ -11,7 +11,7 @@ The project has feature like:
 #How can you Run this project in your local environment ?
 1) clone the repo
 2) run the command npm install (this wiil install all the packages in the packege.json file)
-2) cd into the backend folder and create a file called (.env) and add the following secreat keys
+3) cd into the backend folder and create a file called (.env) and add the following secreat keys
    
    cloud_name: (get your cloud name from cloudinary)
    api_secret: (get your api secreat from cloudinary)
