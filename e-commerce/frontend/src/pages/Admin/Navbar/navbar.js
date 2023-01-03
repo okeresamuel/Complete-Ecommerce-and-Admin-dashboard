@@ -6,7 +6,6 @@ function Navbar() {
     <NavLink to={"Createproduct"}  className={({isActive})=> isActive ? "link_isActive" : "link_isNotActive" }> <span className="Admin__navlink">Create A product</span> </NavLink>
     <NavLink to={"Products"} className={({isActive})=> isActive ? "link_isActive" : "link_isNotActive" } ><span className="Admin__navlink">All Products</span></NavLink>
     <NavLink to={"Users"}  className={({isActive})=> isActive ? "link_isActive" : "link_isNotActive" }><span className="Admin__navlink">Users</span></NavLink>
-    
     <Outlet />
     </div>
   )
