@@ -12,10 +12,12 @@ The project has feature like:
 1) clone the repo
 2) run the command npm install (this wiil install all the packages in the packege.json file)
 3) cd into the backend folder and create a file called (.env) and add the following secreat keys
-    cloud_name: (get your cloud name from cloudinary)
+
+4) cloud_name: (get your cloud name from cloudinary)
+    
     api_secret: (get your api secreat from cloudinary)
-    api_key:  (get your api key from cloudinary)
-    mongodburl: (get your mongodb url from mongodb atlas)
+    api_key:    (get your api key from cloudinary)
+    mongodburl:  (get your mongodb url from mongodb atlas)
     session__secreat: (you can write any secreat here eg 1234455)
     jwt__secreat: (you can write any secreat here eg 09868242)
    
