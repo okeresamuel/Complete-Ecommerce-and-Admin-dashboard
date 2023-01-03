@@ -28,4 +28,5 @@ The project has feature like:
 # projct image:
 ![Screenshot (137)](https://user-images.githubusercontent.com/104143398/210358730-b924bd24-3378-442c-9bd6-e28273a849f0.png)
 
-## Deployed here Cohort4.netlify.app
+## Deployed here 
+https://cohort4.netlify.app/
