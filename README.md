@@ -14,6 +14,7 @@ The project has feature like:
 2) run the command npm install (this wiil install all the packages in the packege.json file)
 3) cd into the backend folder and create a file called (.env) and add the following secreat keys
 
+## Secreats
 1) cloud_name: (get your cloud name from cloudinary)
 2) api_secret: (get your api secreat from cloudinary)
 3) api_key:    (get your api key from cloudinary)
