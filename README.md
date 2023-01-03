@@ -7,7 +7,6 @@ The project has feature like:
 3) Admin dashboard
 4) Stripe payment
 5) User authentication(register and login)
-6) improve performance with (using buffers stream and pipes will be added)
 
 # How can you Run this project in your local environment ?
 1) clone the repo
